@@ -103,7 +103,6 @@
       <DependentUpon>SieuThiDB.dbml</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="DataBase\dbo.NhanVien.sql" />
   </ItemGroup>
