@@ -60,8 +60,18 @@ namespace BUS
             using (var db = new SieuThiDBDataContext())
             {
                 int? manv = 0;
+                var nv = db.NhanViens.FirstOrDefault();
                 db.ManvNext(ref manv);
-                return manv+1 ?? 1;
+                if (nv == null)
+                {
+                    return 1;
+                }
+                else
+                {
+                    db.ManvNext(ref manv);
+                    return manv + 1 ?? 1;
+                }
+               
                
             }
         }

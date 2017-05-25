@@ -58,8 +58,17 @@ namespace BUS
             using (var db = new SieuThiDBDataContext())
             {
                 int? MaGianHang = 0;
-                db.GianHangNext(ref MaGianHang);
-                return MaGianHang + 1 ?? 1;
+                var gh = db.GianHangs.FirstOrDefault();
+                if(gh == null)
+                {
+                    return 1;
+                }
+                else
+                {
+                    db.GianHangNext(ref MaGianHang);
+                    return MaGianHang + 1 ?? 1;
+                }
+               
 
             }
         }

@@ -18,7 +18,7 @@ namespace BanHangTrongSieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmGianHang());
+            Application.Run(new FrmNhanVien());
         }
     }
 }
