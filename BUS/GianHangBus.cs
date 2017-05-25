@@ -1,26 +1,25 @@
-﻿using DAO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DAO;
 namespace BUS
 {
-    public class NhanVienBus
+    public class GianHangBus
     {
-        #region Tạo mới nhân viên
-        public static bool CreateNhanVien(NhanVien nv)
+        // Tạo Gian hang
+        public static bool CreateGianHang(GianHang gh)
         {
             try
             {
                 using (SieuThiDBDataContext db = new SieuThiDBDataContext())
                 {
-                    var nv1 = new NhanVien();
-                    nv1.TenNV = nv.TenNV;
-                    nv1.MoTaKhac = nv.MoTaKhac ?? "";
-                    nv1.DienThoaiLH = nv.DienThoaiLH ?? "";
-                    db.NhanViens.InsertOnSubmit(nv1);
+                    var gh1 = new GianHang();
+                   
+                    gh1.TenGianHang = gh.TenGianHang ?? "";
+                    gh1.LoaiHangMa = gh.LoaiHangMa;
+                    db.GianHangs.InsertOnSubmit(gh1);
                     db.SubmitChanges();
                     return true;
                 }
@@ -30,19 +29,19 @@ namespace BUS
                 return false;
             }
         }
-        #endregion
+        
 
-        #region Cap nhat nhan vien
-        public static bool UpdateNhanVien(NhanVien _nv)
+        // Cap nhat Gian hang
+        public static bool UpdateGianHang(GianHang _gh)
         {
             try
             {
                 using (var db = new SieuThiDBDataContext())
                 {
-                    var nv = db.NhanViens.Single(x => x.MaNV == _nv.MaNV);
-                    nv.TenNV = _nv.TenNV;
-                    nv.DienThoaiLH = _nv.DienThoaiLH;
-                    nv.MoTaKhac = _nv.MoTaKhac;
+                    var gh = db.GianHangs.Single(x => x.MaGianHang == _gh.MaGianHang);
+                    gh.TenGianHang = _gh.TenGianHang;
+                    gh.LoaiHangMa = _gh.LoaiHangMa;
+                    
                     db.SubmitChanges();
                     return true;
                 }
@@ -52,43 +51,41 @@ namespace BUS
                 return false;
             }
         }
-        #endregion
-
-        #region Lay Id Nhan vien tiep theo
-        public static int GetMaNVNext()
+        
+       // Lay Id Gian Hang tiep theo
+        public static int GetMaGHNext()
         {
             using (var db = new SieuThiDBDataContext())
             {
-                int? manv = 0;
-                var nv = db.NhanViens.FirstOrDefault();
-                db.ManvNext(ref manv);
-                if (nv == null)
+                int? MaGianHang = 0;
+                var gh = db.GianHangs.FirstOrDefault();
+                if(gh == null)
                 {
                     return 1;
                 }
                 else
                 {
-                    db.ManvNext(ref manv);
-                    return manv + 1 ?? 1;
+                    db.GianHangNext(ref MaGianHang);
+                    return MaGianHang + 1 ?? 1;
                 }
                
-               
+
             }
         }
-        #endregion
+        
 
-        #region Lay danh sach nhan vien
-        public static List<NhanVien> GetListNhanVien()
+          //danh sach gian hang
+        public static List<GianHang> GetListGianHang()
         {
             using (var db = new SieuThiDBDataContext())
             {
-                return db.NhanViens.OrderBy(x=>x.TenNV).ToList();
+                return db.GianHangs.OrderBy(x => x.TenGianHang).ToList();
             }
         }
-        #endregion
+       
 
-        #region Xoa nhan vien
-        public static bool DeleteNhanVien(int id)
+        // Xoa gian hang
+        public static bool DeleteGianHang(int id)
         {
             try
             {
@@ -96,10 +93,10 @@ namespace BUS
 
                 using (var db = new SieuThiDBDataContext())
                 {
-                    var nv = db.NhanViens.Single(x => x.MaNV == id);
-                    if (nv != null)
+                    var gh = db.GianHangs.Single(x => x.MaGianHang == id);
+                    if (gh != null)
                     {
-                        db.NhanViens.DeleteOnSubmit(nv);
+                        db.GianHangs.DeleteOnSubmit(gh);
                         db.SubmitChanges();
                         return true;
                     }
@@ -113,7 +110,8 @@ namespace BUS
             {
                 return false;
             }
-            #endregion
+           
         }
+
     }
 }

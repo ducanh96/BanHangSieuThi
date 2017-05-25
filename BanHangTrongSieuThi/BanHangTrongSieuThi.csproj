@@ -64,6 +64,24 @@
     <Compile Include="Duc Anh\FrmUpdateNhanVien.Designer.cs">
       <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Khoa\FrmCreateGianHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa\FrmCreateGianHang.Designer.cs">
+      <DependentUpon>FrmCreateGianHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\FrmGianHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa\FrmGianHang.Designer.cs">
+      <DependentUpon>FrmGianHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\FrmUpdateGianHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa\FrmUpdateGianHang.Designer.cs">
+      <DependentUpon>FrmUpdateGianHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Duc Anh\FrmCreateNhanVien.resx">
@@ -74,6 +92,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmUpdateNhanVien.resx">
       <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\FrmCreateGianHang.resx">
+      <DependentUpon>FrmCreateGianHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\FrmGianHang.resx">
+      <DependentUpon>FrmGianHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\FrmUpdateGianHang.resx">
+      <DependentUpon>FrmUpdateGianHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +137,7 @@
       <Name>DAO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

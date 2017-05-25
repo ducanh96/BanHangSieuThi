@@ -1,4 +1,5 @@
 ﻿using BanHangTrongSieuThi;
+using BanHangTrongSieuThi.Khoa;
 using System;
 using System.Collections.Generic;
 using System.Linq;
