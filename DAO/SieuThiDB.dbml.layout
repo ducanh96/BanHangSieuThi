@@ -14,5 +14,18 @@
         <elementListCompartment Id="84646df5-87d3-4dd5-baf0-53271a04a81a" absoluteBounds="4.39, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="2c079736-5a1b-4eda-9639-8c1dbae66ba4" absoluteBounds="5.375, 4.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SieuThiDBDataContext/LoaiHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e827d4b8-e012-4db7-96c9-b2bb6da1baf1" absoluteBounds="5.39, 4.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.875 : 4.125); (5.875 : 2.6362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SieuThiDBDataContext/LoaiHang/LoaiHang_GianHang" />
+      <nodes>
+        <classShapeMoniker Id="2c079736-5a1b-4eda-9639-8c1dbae66ba4" />
+        <classShapeMoniker Id="f28e036c-df5f-48ea-a8cc-d46e53104aca" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

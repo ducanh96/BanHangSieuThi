@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SieuThiDB" Class="SieuThiDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=KHOA-PC\SQLEXPRESS;Initial Catalog=SieuThiDB;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="SieuThiDBConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DataQLST" Class="SieuThiDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=K3MSHIRO\SQLEXPRESS;Initial Catalog=DataQLST;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="DataQLSTConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.NhanVien" Member="NhanViens">
     <Type Name="NhanVien">
       <Column Name="MaNV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -13,6 +13,14 @@
       <Column Name="MaGianHang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenGianHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="LoaiHangMa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LoaiHang_GianHang" Member="LoaiHang" ThisKey="LoaiHangMa" OtherKey="MaLoaiHang" Type="LoaiHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiHang" Member="LoaiHangs">
+    <Type Name="LoaiHang">
+      <Column Name="MaLoaiHang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenLoaiHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="LoaiHang_GianHang" Member="GianHangs" ThisKey="MaLoaiHang" OtherKey="LoaiHangMa" Type="GianHang" />
     </Type>
   </Table>
   <Function Name="dbo.ManvNext" Method="ManvNext">
@@ -21,6 +29,10 @@
   </Function>
   <Function Name="dbo.GianHangNext" Method="GianHangNext">
     <Parameter Name="MaGianHang" Parameter="maGianHang" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LoaiHangGanNhat" Method="LoaiHangGanNhat">
+    <Parameter Name="MaLoaiHang" Parameter="maLoaiHang" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

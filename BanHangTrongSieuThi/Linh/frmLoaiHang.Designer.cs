@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -35,16 +36,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvLoaiHang = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbTenLoaiHang = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.tbMaLoaiHang = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbTenLoaiHang = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.loaiHangBidingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.erpName = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiHang)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiHangBidingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpName)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -67,6 +73,7 @@
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // tbTimKiem
             // 
@@ -74,6 +81,7 @@
             this.tbTimKiem.Name = "tbTimKiem";
             this.tbTimKiem.Size = new System.Drawing.Size(133, 20);
             this.tbTimKiem.TabIndex = 1;
+            this.tbTimKiem.TextChanged += new System.EventHandler(this.tbTimKiem_TextChanged);
             // 
             // label1
             // 
@@ -107,6 +115,7 @@
             this.dgvLoaiHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLoaiHang.Size = new System.Drawing.Size(262, 223);
             this.dgvLoaiHang.TabIndex = 6;
+            this.dgvLoaiHang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiHang_CellDoubleClick);
             // 
             // groupBox2
             // 
@@ -122,6 +131,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sửa thông tin";
             // 
+            // tbTenLoaiHang
+            // 
+            this.tbTenLoaiHang.Location = new System.Drawing.Point(108, 121);
+            this.tbTenLoaiHang.Name = "tbTenLoaiHang";
+            this.tbTenLoaiHang.Size = new System.Drawing.Size(138, 20);
+            this.tbTenLoaiHang.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Tên loại hàng";
+            // 
             // btnSua
             // 
             this.btnSua.Location = new System.Drawing.Point(91, 180);
@@ -130,6 +155,7 @@
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // tbMaLoaiHang
             // 
@@ -148,22 +174,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã loại hàng";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tên loại hàng";
-            // 
-            // tbTenLoaiHang
-            // 
-            this.tbTenLoaiHang.Location = new System.Drawing.Point(108, 121);
-            this.tbTenLoaiHang.Name = "tbTenLoaiHang";
-            this.tbTenLoaiHang.Size = new System.Drawing.Size(138, 20);
-            this.tbTenLoaiHang.TabIndex = 4;
-            // 
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(35, 340);
@@ -172,6 +182,7 @@
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm mới";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnThoat
             // 
@@ -182,11 +193,30 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(189, 340);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 8;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // loaiHangBidingSource
+            // 
+            this.loaiHangBidingSource.DataSource = typeof(DAO.LoaiHang);
+            // 
+            // erpName
+            // 
+            this.erpName.ContainerControl = this;
+            // 
             // frmLoaiHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 375);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.groupBox2);
@@ -200,6 +230,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiHang)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiHangBidingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpName)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,5 +251,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.BindingSource loaiHangBidingSource;
+        private System.Windows.Forms.ErrorProvider erpName;
     }
 }

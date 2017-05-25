@@ -44,5 +44,16 @@ namespace DAO.Properties {
                 return ((string)(this["SieuThiDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=K3MSHIRO\\SQLEXPRESS;Initial Catalog=DataQLST;Integrated Security=True" +
+            "")]
+        public string DataQLSTConnectionString {
+            get {
+                return ((string)(this["DataQLSTConnectionString"]));
+            }
+        }
     }
 }
