@@ -8,5 +8,11 @@
         <elementListCompartment Id="fec815e0-3872-47ad-ac3e-588e62aeb662" absoluteBounds="1.6400000000000001, 2.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="f28e036c-df5f-48ea-a8cc-d46e53104aca" absoluteBounds="4.375, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SieuThiDBDataContext/GianHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84646df5-87d3-4dd5-baf0-53271a04a81a" absoluteBounds="4.39, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
