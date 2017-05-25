@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataQLSTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataQLSTDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Duc Anh\FrmCreateNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,7 +87,19 @@
     <Compile Include="Khoa\FrmUpdateGianHang.Designer.cs">
       <DependentUpon>FrmUpdateGianHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Linh\frmLoaiHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Linh\frmLoaiHang.Designer.cs">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Linh\frmThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Linh\frmThem.Designer.cs">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Linh\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Duc Anh\FrmCreateNhanVien.resx">
       <DependentUpon>FrmCreateNhanVien.cs</DependentUpon>
@@ -102,6 +119,12 @@
     <EmbeddedResource Include="Khoa\FrmUpdateGianHang.resx">
       <DependentUpon>FrmUpdateGianHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Linh\frmLoaiHang.resx">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Linh\frmThem.resx">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -111,6 +134,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataQLSTDataSet.xsc">
+      <DependentUpon>DataQLSTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataQLSTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataQLSTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataQLSTDataSet.xss">
+      <DependentUpon>DataQLSTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\DAO.LoaiHang.datasource" />
     <None Include="Properties\DataSources\DAO.NhanVien.datasource">
       <SubType>Designer</SubType>
     </None>

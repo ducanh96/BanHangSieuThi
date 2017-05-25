@@ -152,7 +152,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Name = "FrmCreateGianHang";
-            this.Text = "FrmCreateGianHang";
+            this.Text = "Tạo mới gian hàng";
             this.Load += new System.EventHandler(this.FrmCreateGianHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errTenGH)).EndInit();
             this.ResumeLayout(false);
