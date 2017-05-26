@@ -9,14 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DAO;
+using BanHangTrongSieuThi.Linh;
+
 namespace BanHangTrongSieuThi.Khoa
 {
     public partial class FrmCreateGianHang : Form
     {
         public FrmGianHang _frmGH;
+        public LoaiHang lh;
         public FrmCreateGianHang()
         {
             InitializeComponent();
+           
         }
 
         private void txtLuu_Click(object sender, EventArgs e)
@@ -60,6 +64,12 @@ namespace BanHangTrongSieuThi.Khoa
             this.Close();
         }
 
-        
+        private void btnGianHang_Click(object sender, EventArgs e)
+        {
+            frmLoaiHang frmLH = new frmLoaiHang();
+            frmLH._frmCreateGianHang = this;
+            frmLH.Show();
+            
+        }
     }
 }

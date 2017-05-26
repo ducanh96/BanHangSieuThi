@@ -64,7 +64,7 @@ namespace BanHangTrongSieuThi.Khoa
             }
             else
             {
-                dataFilter = data.Where(x => x.TenGianHang.Contains(txtName.Text)).ToList();
+                dataFilter = data.Where(x => x.TenGianHang.ToLower().Contains(txtName.Text.ToLower())).ToList();
                 dgvGianHang.DataSource = dataFilter;
             }
         }
@@ -84,6 +84,17 @@ namespace BanHangTrongSieuThi.Khoa
             update._frmGH = this;
             update.gh = _gh;
             update.Show();
+        }
+
+        private void dgvGianHang_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            GianHang gh = dgvGianHang.Rows[e.RowIndex].DataBoundItem as GianHang;
+            string tenLoaiHang;
+            using (var db = new SieuThiDBDataContext())
+            {
+                tenLoaiHang = db.LoaiHangs.Single(x => x.MaLoaiHang == gh.LoaiHangMa).TenLoaiHang;
+            }
+            dgvGianHang.Rows[e.RowIndex].Cells[colLoaiHang.Index].Value = tenLoaiHang;
         }
     }
 }

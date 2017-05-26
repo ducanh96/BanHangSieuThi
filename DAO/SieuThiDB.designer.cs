@@ -22,7 +22,7 @@ namespace DAO
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DataQLST")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="SieuThiDB")]
 	public partial class SieuThiDBDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -42,7 +42,7 @@ namespace DAO
     #endregion
 		
 		public SieuThiDBDataContext() : 
-				base(global::DAO.Properties.Settings.Default.DataQLSTConnectionString, mappingSource)
+				base(global::DAO.Properties.Settings.Default.SieuThiConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
