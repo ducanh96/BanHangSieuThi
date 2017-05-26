@@ -33,5 +33,16 @@ namespace DAO.Properties {
                 return ((string)(this["SieuThiConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-I269IGU\\SQLEXPRESS;Initial Catalog=bhst;Integrated Security=T" +
+            "rue")]
+        public string bhstConnectionString {
+            get {
+                return ((string)(this["bhstConnectionString"]));
+            }
+        }
     }
 }

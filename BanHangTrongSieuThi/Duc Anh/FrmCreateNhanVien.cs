@@ -25,6 +25,7 @@ namespace BanHangTrongSieuThi.Duc_Anh
             if (txtTenNv.Text.Length == 0)
             {
                 errTenNV.SetError(txtTenNv, "Không được để trống");
+                
             }
             else
             {
