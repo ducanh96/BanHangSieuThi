@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,7 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL_KetNoiDB.cs" />
+    <Compile Include="DataQLSTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataQLSTDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Duc Anh\FrmCreateNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,26 +70,50 @@
     <Compile Include="Duc Anh\FrmUpdateNhanVien.Designer.cs">
       <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Khoa\frmLoaiHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa\frmLoaiHang.Designer.cs">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\FrmCreateGianHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa\FrmCreateGianHang.Designer.cs">
+      <DependentUpon>FrmCreateGianHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\FrmGianHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa\FrmGianHang.Designer.cs">
+      <DependentUpon>FrmGianHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\frmThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa\frmThem.Designer.cs">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\FrmUpdateGianHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa\FrmUpdateGianHang.Designer.cs">
+      <DependentUpon>FrmUpdateGianHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Linh\frmLoaiHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Linh\frmLoaiHang.Designer.cs">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Linh\frmThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Linh\frmThem.Designer.cs">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Linh\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tuyet\FrmCreateNhaCC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tuyet\FrmCreateNhaCC.Designer.cs">
-      <DependentUpon>FrmCreateNhaCC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Tuyet\FrmNhaCC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tuyet\FrmNhaCC.Designer.cs">
-      <DependentUpon>FrmNhaCC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Tuyet\FrmUpNhaCC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tuyet\FrmUpNhaCC.Designer.cs">
-      <DependentUpon>FrmUpNhaCC.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Duc Anh\FrmCreateNhanVien.resx">
       <DependentUpon>FrmCreateNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +123,27 @@
     <EmbeddedResource Include="Duc Anh\FrmUpdateNhanVien.resx">
       <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\frmLoaiHang.resx">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\FrmCreateGianHang.resx">
+      <DependentUpon>FrmCreateGianHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\FrmGianHang.resx">
+      <DependentUpon>FrmGianHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\frmThem.resx">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\FrmUpdateGianHang.resx">
+      <DependentUpon>FrmUpdateGianHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Linh\frmLoaiHang.resx">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Linh\frmThem.resx">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -102,17 +152,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Tuyet\FrmCreateNhaCC.resx">
-      <DependentUpon>FrmCreateNhaCC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tuyet\FrmNhaCC.resx">
-      <DependentUpon>FrmNhaCC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tuyet\FrmUpNhaCC.resx">
-      <DependentUpon>FrmUpNhaCC.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="DataQLSTDataSet.xsc">
+      <DependentUpon>DataQLSTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataQLSTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataQLSTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataQLSTDataSet.xss">
+      <DependentUpon>DataQLSTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\DAO.LoaiHang.datasource" />
     <None Include="Properties\DataSources\DAO.NhanVien.datasource">
       <SubType>Designer</SubType>
     </None>
@@ -139,18 +191,7 @@
       <Name>DAO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit_user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close1.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

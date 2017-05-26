@@ -4,23 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace BUS
 {
-    public class NhanVienBus
+    public class LoaiHangBus
     {
-        #region Tạo mới nhân viên
-        public static bool CreateNhanVien(NhanVien nv)
+
+        public static bool createLoaiHang(LoaiHang loaiHang)
         {
             try
             {
                 using (SieuThiDBDataContext db = new SieuThiDBDataContext())
                 {
-                    var nv1 = new NhanVien();
-                    nv1.TenNV = nv.TenNV;
-                    nv1.MoTaKhac = nv.MoTaKhac ?? "";
-                    nv1.DienThoaiLH = nv.DienThoaiLH ?? "";
-                    db.NhanViens.InsertOnSubmit(nv1);
+                    var lh = new LoaiHang();
+                    lh.TenLoaiHang = loaiHang.TenLoaiHang;
+                    db.LoaiHangs.InsertOnSubmit(lh);
                     db.SubmitChanges();
                     return true;
                 }
@@ -30,19 +27,15 @@ namespace BUS
                 return false;
             }
         }
-        #endregion
 
-        #region Cap nhat nhan vien
-        public static bool UpdateNhanVien(NhanVien _nv)
+        public static bool updateLoaiHang(LoaiHang _lh)
         {
             try
             {
                 using (var db = new SieuThiDBDataContext())
                 {
-                    var nv = db.NhanViens.Single(x => x.MaNV == _nv.MaNV);
-                    nv.TenNV = _nv.TenNV;
-                    nv.DienThoaiLH = _nv.DienThoaiLH;
-                    nv.MoTaKhac = _nv.MoTaKhac;
+                    var loaiHang = db.LoaiHangs.Single(x => x.MaLoaiHang == _lh.MaLoaiHang);
+                    loaiHang.TenLoaiHang = _lh.TenLoaiHang;
                     db.SubmitChanges();
                     return true;
                 }
@@ -52,43 +45,38 @@ namespace BUS
                 return false;
             }
         }
-        #endregion
 
-        #region Lay Id Nhan vien tiep theo
-        public static int GetMaNVNext()
+
+        public static int getCurrentMaLoaiHang()
         {
             using (var db = new SieuThiDBDataContext())
             {
-                int? manv = 0;
-                var nv = db.NhanViens.FirstOrDefault();
-                db.ManvNext(ref manv);
-                if (nv == null)
+                int? maLoaiHang = 0;
+                var lh = db.LoaiHangs.FirstOrDefault();
+                db.LoaiHangGanNhat(ref maLoaiHang);
+                if (lh == null)
                 {
                     return 1;
                 }
                 else
                 {
-                    db.ManvNext(ref manv);
-                    return manv + 1 ?? 1;
+                    db.LoaiHangGanNhat(ref maLoaiHang);
+                    return maLoaiHang + 1 ?? 1;
                 }
-               
-               
+
+
             }
         }
-        #endregion
 
-        #region Lay danh sach nhan vien
-        public static List<NhanVien> GetListNhanVien()
+        public static List<LoaiHang> getListLoaiHang()
         {
             using (var db = new SieuThiDBDataContext())
             {
-                return db.NhanViens.OrderBy(x=>x.TenNV).ToList();
+                return db.LoaiHangs.OrderBy(x => x.TenLoaiHang).ToList();
             }
         }
-        #endregion
 
-        #region Xoa nhan vien
-        public static bool DeleteNhanVien(int id)
+        public static bool deleteLoaiHang(int id)
         {
             try
             {
@@ -96,10 +84,10 @@ namespace BUS
 
                 using (var db = new SieuThiDBDataContext())
                 {
-                    var nv = db.NhanViens.Single(x => x.MaNV == id);
+                    var nv = db.LoaiHangs.Single(x => x.MaLoaiHang == id);
                     if (nv != null)
                     {
-                        db.NhanViens.DeleteOnSubmit(nv);
+                        db.LoaiHangs.DeleteOnSubmit(nv);
                         db.SubmitChanges();
                         return true;
                     }
@@ -113,7 +101,6 @@ namespace BUS
             {
                 return false;
             }
-            #endregion
         }
     }
 }
