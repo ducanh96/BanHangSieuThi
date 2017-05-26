@@ -785,17 +785,17 @@ namespace DAO
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _MaHang;
+		private string _MaHang;
 		
 		private string _TenHang;
 		
 		private string _DVT;
 		
-		private System.Nullable<int> _SoLuong;
-		
 		private System.Nullable<int> _MaLoaiHang;
 		
 		private System.Nullable<int> _MaNCC;
+		
+		private string _GhiChu;
 		
 		private EntityRef<LoaiHang> _LoaiHang;
 		
@@ -805,18 +805,18 @@ namespace DAO
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnMaHangChanging(int value);
+    partial void OnMaHangChanging(string value);
     partial void OnMaHangChanged();
     partial void OnTenHangChanging(string value);
     partial void OnTenHangChanged();
     partial void OnDVTChanging(string value);
     partial void OnDVTChanged();
-    partial void OnSoLuongChanging(System.Nullable<int> value);
-    partial void OnSoLuongChanged();
     partial void OnMaLoaiHangChanging(System.Nullable<int> value);
     partial void OnMaLoaiHangChanged();
     partial void OnMaNCCChanging(System.Nullable<int> value);
     partial void OnMaNCCChanged();
+    partial void OnGhiChuChanging(string value);
+    partial void OnGhiChuChanged();
     #endregion
 		
 		public Hang()
@@ -826,8 +826,8 @@ namespace DAO
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaHang", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int MaHang
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaHang", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaHang
 		{
 			get
 			{
@@ -886,26 +886,6 @@ namespace DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
-		public System.Nullable<int> SoLuong
-		{
-			get
-			{
-				return this._SoLuong;
-			}
-			set
-			{
-				if ((this._SoLuong != value))
-				{
-					this.OnSoLuongChanging(value);
-					this.SendPropertyChanging();
-					this._SoLuong = value;
-					this.SendPropertyChanged("SoLuong");
-					this.OnSoLuongChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoaiHang", DbType="Int")]
 		public System.Nullable<int> MaLoaiHang
 		{
@@ -950,6 +930,26 @@ namespace DAO
 					this._MaNCC = value;
 					this.SendPropertyChanged("MaNCC");
 					this.OnMaNCCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(50)")]
+		public string GhiChu
+		{
+			get
+			{
+				return this._GhiChu;
+			}
+			set
+			{
+				if ((this._GhiChu != value))
+				{
+					this.OnGhiChuChanging(value);
+					this.SendPropertyChanging();
+					this._GhiChu = value;
+					this.SendPropertyChanged("GhiChu");
+					this.OnGhiChuChanged();
 				}
 			}
 		}

@@ -12,18 +12,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BanHangTrongSieuThi.Khoa
+namespace BanHangTrongSieuThi.Duc_Anh
 {
     public partial class frmLoaiHang : Form
     {
-      
 
-        //
+
+        public FrmCreateHangHoa _frmCreateHH;
         public List<LoaiHang> data;
         List<LoaiHang> dataFilter;
         private LoaiHang lh;
-        public FrmCreateGianHang _frmCreateGianHang;
-
+      
         public frmLoaiHang()
         {
             InitializeComponent();
@@ -136,7 +135,7 @@ namespace BanHangTrongSieuThi.Khoa
         private void btnChon_Click(object sender, EventArgs e)
         {
             var LoaiHangChon = dgvLoaiHang.CurrentRow.DataBoundItem as LoaiHang;
-            _frmCreateGianHang.txtMaLoaiHang.Text = LoaiHangChon.MaLoaiHang.ToString();
+            _frmCreateHH.txtMaLH.Text = LoaiHangChon.MaLoaiHang.ToString();
 
             this.Close();
         }

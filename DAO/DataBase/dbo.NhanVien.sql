@@ -65,10 +65,11 @@ create table NhaCungCap(
 
 --duc anh tao bang hang
 Create table Hang(
-	MaHang int primary key identity(1,1),
+	MaHang nvarchar(150) primary key ,
 	TenHang nvarchar(50),
 	DVT nvarchar(15),
-	SoLuong int,
 	MaLoaiHang int references LoaiHang(MaLoaiHang),
-	MaNCC int references NhaCungCap(MaNCC)
+	MaNCC int references NhaCungCap(MaNCC),
+	GhiChu nvarchar(50)
 )
+
