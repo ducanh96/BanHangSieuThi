@@ -1,4 +1,5 @@
 ﻿using BanHangTrongSieuThi;
+using BanHangTrongSieuThi.HuyDung;
 using BanHangTrongSieuThi.Khoa;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace BanHangTrongSieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmNhanVien());
+            Application.Run(new frmLogin());
         }
     }
 }

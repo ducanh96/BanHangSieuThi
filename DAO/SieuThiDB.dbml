@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SieuThiDB" Class="SieuThiDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=KHOA-PC\SQLEXPRESS;Initial Catalog=SieuThiDB;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="SieuThiDBConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\v11.0;Initial Catalog=SieuThiDB;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="SieuThiDBConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.NhanVien" Member="NhanViens">
     <Type Name="NhanVien">
       <Column Name="MaNV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -13,6 +13,12 @@
       <Column Name="MaGianHang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenGianHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="LoaiHangMa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DangNhap" Member="DangNhaps">
+    <Type Name="DangNhap">
+      <Column Name="Username" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.ManvNext" Method="ManvNext">

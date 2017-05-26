@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +65,12 @@
     <Compile Include="Duc Anh\FrmUpdateNhanVien.Designer.cs">
       <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="HuyDung\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuyDung\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Khoa\FrmCreateGianHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmUpdateNhanVien.resx">
       <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuyDung\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Khoa\FrmCreateGianHang.resx">
       <DependentUpon>FrmCreateGianHang.cs</DependentUpon>
