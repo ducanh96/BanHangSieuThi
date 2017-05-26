@@ -37,12 +37,12 @@
   </Table>
   <Table Name="dbo.Hang" Member="Hangs">
     <Type Name="Hang">
-      <Column Name="MaHang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaHang" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DVT" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
-      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaLoaiHang" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaNCC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="LoaiHang_Hang" Member="LoaiHang" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="LoaiHang" IsForeignKey="true" />
       <Association Name="NhaCungCap_Hang" Member="NhaCungCap" ThisKey="MaNCC" OtherKey="MaNCC" Type="NhaCungCap" IsForeignKey="true" />
     </Type>

@@ -58,6 +58,12 @@
     <Compile Include="Duc Anh\FrmChinh.Designer.cs">
       <DependentUpon>FrmChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Duc Anh\FrmCreateHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\FrmCreateHangHoa.Designer.cs">
+      <DependentUpon>FrmCreateHangHoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Duc Anh\FrmCreateNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +76,23 @@
     <Compile Include="Duc Anh\FrmHangHoa.Designer.cs">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Duc Anh\frmLoaiHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\frmLoaiHang.Designer.cs">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Duc Anh\FrmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Duc Anh\FrmNhanVien.Designer.cs">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\frmThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\frmThem.Designer.cs">
+      <DependentUpon>frmThem.cs</DependentUpon>
     </Compile>
     <Compile Include="Duc Anh\FrmUpdateNhanVien.cs">
       <SubType>Form</SubType>
@@ -147,11 +165,23 @@
     <EmbeddedResource Include="Duc Anh\FrmChinh.resx">
       <DependentUpon>FrmChinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\FrmCreateHangHoa.resx">
+      <DependentUpon>FrmCreateHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmCreateNhanVien.resx">
       <DependentUpon>FrmCreateNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\FrmHangHoa.resx">
+      <DependentUpon>FrmHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\frmLoaiHang.resx">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmNhanVien.resx">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\frmThem.resx">
+      <DependentUpon>frmThem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmUpdateNhanVien.resx">
       <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
@@ -206,6 +236,7 @@
     <None Include="DataQLSTDataSet.xss">
       <DependentUpon>DataQLSTDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\DAO.Hang.datasource" />
     <None Include="Properties\DataSources\DAO.LoaiHang.datasource" />
     <None Include="Properties\DataSources\DAO.NhanVien.datasource">
       <SubType>Designer</SubType>

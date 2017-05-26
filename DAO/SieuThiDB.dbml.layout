@@ -33,24 +33,24 @@
         <elementListCompartment Id="f41eb028-32ae-4171-81b3-aa5b4ebac2f6" absoluteBounds="5.015, 4.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="f1fc6082-3937-4ae8-a035-38214f8e7db3" absoluteBounds="2.125, 3.625, 2, 1.9631982421875">
+    <classShape Id="cc34ed1c-870d-4461-a590-7743f32f48fd" absoluteBounds="2.5, 4.75, 2, 1.9631982421875">
       <DataClassMoniker Name="/SieuThiDBDataContext/Hang" />
       <nestedChildShapes>
-        <elementListCompartment Id="09e53b2a-afd9-419e-9033-7e0e959ecd67" absoluteBounds="2.14, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="fd03fe40-5ae9-4e04-a771-ff92bfd467f8" absoluteBounds="2.515, 5.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.125 : 3.00889322916667); (2.9375 : 3.00889322916667); (2.9375 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(7.59375 : 3.19399251302083); (7.59375 : 6.6194482421875); (4.5 : 6.6194482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/SieuThiDBDataContext/LoaiHang/LoaiHang_Hang" />
       <nodes>
         <classShapeMoniker Id="12de90e8-1f80-4eca-aaf7-f40ee6a85fb9" />
-        <classShapeMoniker Id="f1fc6082-3937-4ae8-a035-38214f8e7db3" />
+        <classShapeMoniker Id="cc34ed1c-870d-4461-a590-7743f32f48fd" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5 : 5.04409912109375); (4.125 : 5.04409912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5 : 5.60659912109375); (4.5 : 5.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/SieuThiDBDataContext/NhaCungCap/NhaCungCap_Hang" />
       <nodes>
         <classShapeMoniker Id="8eefa621-e74e-420f-a352-0b82075d83a6" />
-        <classShapeMoniker Id="f1fc6082-3937-4ae8-a035-38214f8e7db3" />
+        <classShapeMoniker Id="cc34ed1c-870d-4461-a590-7743f32f48fd" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
