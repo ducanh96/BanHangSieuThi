@@ -92,11 +92,7 @@ namespace BanHangTrongSieuThi
 
         }
 
-        public static implicit operator FrmNhanVien(FrmNhaCC v)
-        {
-            throw new NotImplementedException();
-        }
-
+     
         private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var _nv = dgvNhanVien.Rows[e.RowIndex].DataBoundItem as NhanVien;
