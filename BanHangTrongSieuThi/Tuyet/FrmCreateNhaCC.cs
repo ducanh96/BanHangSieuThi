@@ -26,32 +26,32 @@ namespace BanHangTrongSieuThi.Tuyet
 
         private void FrmCreateNhaCC_Load(object sender, EventArgs e)
         {
-            txtMa.Text = NhanVienBus.GetMaNhaCCNext().ToString();
+            txtMa.Text = NhaCungCapBus.GetMaNhaCCNext().ToString();
         }
 
         private void txtLuu_Click(object sender, EventArgs e)
         {
             if (txtTen.Text.Length == 0)
             {
-                errten.SetError(txtTen, "Không được để trống");
+                errorProvider1.SetError(txtTen, "Không được để trống");
             }
             else
             {
-                errten.SetError(txtTen, " ");
+                errorProvider1.SetError(txtTen, "");
             }
-            if (errten.GetError(txtTen).Length == 0)
+            if (errorProvider1.GetError(txtTen).Length == 0)
             {
 
-                var cc = new nhacungcap();
-                cc.tennhacungcap = txtTen.Text;
-                cc.diachi = txtdiachi.Text;
-                cc.sodienthoai = txtSodienthoai.Text;
-                cc.fax = txtFax.Text;
-                cc.masothue = txtMathue.Text;
-                if (NhanVienBus.CreateNhanVien(cc))
+                var cc = new NhaCungCap();
+                cc.TenNCC = txtTen.Text??"";
+                cc.DiaChi = txtdiachi.Text ?? "";
+                cc.DienThoai = txtSodienthoai.Text ?? "";
+                cc.Fax= txtFax.Text ?? "";
+                cc.MaSoThue = txtMathue.Text ?? "";
+                if (NhaCungCapBus.CreateNhaCC(cc))
                 {
                     MessageBox.Show("Thêm mới thánh công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    _frmCC.data = NhanVienBus.GetListNhaCC();
+                    _frmCC.data = NhaCungCapBus.GetListNhaCC();
                     _frmCC.dgvNhaCC.DataSource = _frmCC.data;
                     this.Close();
                 }

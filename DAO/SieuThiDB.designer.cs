@@ -22,7 +22,7 @@ namespace DAO
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="SieuThiDB")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="bhst")]
 	public partial class SieuThiDBDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -64,8 +64,13 @@ namespace DAO
 		{
 			OnCreated();
 		}
-		
-		public SieuThiDBDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+
+        public void MaNhaCCNext(ref int? maNCC)
+        {
+            throw new NotImplementedException();
+        }
+
+        public SieuThiDBDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();

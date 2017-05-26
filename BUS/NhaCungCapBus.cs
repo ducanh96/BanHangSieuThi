@@ -4,22 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAO;
+
 namespace BUS
 {
-    public class GianHangBus
+    public class NhaCungCapBus
     {
-        // Tạo Gian hang
-        public static bool CreateGianHang(GianHang gh)
+        // Tạo nhacc
+        public static bool CreateNhaCC(NhaCungCap cc)
         {
             try
             {
                 using (SieuThiDBDataContext db = new SieuThiDBDataContext())
                 {
-                    var gh1 = new GianHang();
-                   
-                    gh1.TenGianHang = gh.TenGianHang ?? "";
-                    gh1.LoaiHangMa = gh.LoaiHangMa;
-                    db.GianHangs.InsertOnSubmit(gh1);
+                    var cc1 = new NhaCungCap();
+
+                    cc1.TenNCC = cc.TenNCC ?? "";
+                    cc1.MaNCC = cc.MaNCC;
+                    cc1.DiaChi = cc.DiaChi;
+                    cc1.DienThoai = cc.DienThoai;
+                    cc1.MaSoThue = cc.MaSoThue;
+                    cc1.Fax = cc.Fax;
+                    db.NhaCungCaps.InsertOnSubmit(cc1);
                     db.SubmitChanges();
                     return true;
                 }
@@ -29,19 +34,23 @@ namespace BUS
                 return false;
             }
         }
-        
 
-        // Cap nhat Gian hang
-        public static bool UpdateGianHang(GianHang _gh)
+
+        // Cap nhat nhacc
+        public static bool UpdateNhaCC(NhaCungCap _cc)
         {
             try
             {
                 using (var db = new SieuThiDBDataContext())
                 {
-                    var gh = db.GianHangs.Single(x => x.MaGianHang == _gh.MaGianHang);
-                    gh.TenGianHang = _gh.TenGianHang;
-                    gh.LoaiHangMa = _gh.LoaiHangMa;
-                    
+                    var cc = db.NhaCungCaps.Single(x => x.MaNCC == _cc.MaNCC);
+                    cc.TenNCC = _cc.TenNCC;
+                    cc.DiaChi = _cc.DiaChi;
+                    cc.DienThoai = _cc.DienThoai;
+                    cc.MaSoThue = _cc.MaSoThue;
+                    cc.Fax = _cc.Fax;
+                   
+
                     db.SubmitChanges();
                     return true;
                 }
@@ -51,42 +60,42 @@ namespace BUS
                 return false;
             }
         }
-        
-       // Lay Id Gian Hang tiep theo
-        public static int GetMaGHNext()
+
+        // Lay Id nhacc tiep theo
+        public static int GetMaNhaCCNext()
         {
             using (var db = new SieuThiDBDataContext())
             {
-                int? MaGianHang = 0;
-                var gh = db.GianHangs.FirstOrDefault();
-                if(gh == null)
+                int? MaNCC = 0;
+                var gh = db.NhaCungCaps.FirstOrDefault();
+                if (gh == null)
                 {
                     return 1;
                 }
                 else
                 {
-                    
-                    db.GianHangNext(ref MaGianHang);
-                    return MaGianHang + 1 ?? 1;
+                 
+                   db.MaNhaCCNext(ref MaNCC);
+                    return MaNCC + 1 ?? 1;
                 }
-               
+
 
             }
         }
-        
 
-          //danh sach gian hang
-        public static List<GianHang> GetListGianHang()
+
+        //danh sach nhacc
+        public static List<NhaCungCap> GetListNhaCC()
         {
             using (var db = new SieuThiDBDataContext())
             {
-                return db.GianHangs.OrderBy(x => x.TenGianHang).ToList();
+                return db.NhaCungCaps.OrderBy(x => x.TenNCC).ToList();
             }
         }
-       
 
-        // Xoa gian hang
-        public static bool DeleteGianHang(int id)
+
+        // Xoa nhacc
+        public static bool DeleteNhaCC(int id)
         {
             try
             {
@@ -94,10 +103,10 @@ namespace BUS
 
                 using (var db = new SieuThiDBDataContext())
                 {
-                    var gh = db.GianHangs.Single(x => x.MaGianHang == id);
-                    if (gh != null)
+                    var cc = db.NhaCungCaps.Single(x => x.MaNCC == id);
+                    if (cc != null)
                     {
-                        db.GianHangs.DeleteOnSubmit(gh);
+                        db.NhaCungCaps.DeleteOnSubmit(cc);
                         db.SubmitChanges();
                         return true;
                     }
@@ -111,7 +120,7 @@ namespace BUS
             {
                 return false;
             }
-           
+
         }
 
     }
