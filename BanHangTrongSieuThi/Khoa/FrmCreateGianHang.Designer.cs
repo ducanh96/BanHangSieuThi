@@ -40,6 +40,7 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.errTenGH = new System.Windows.Forms.ErrorProvider(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this.btnGianHang = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errTenGH)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,11 +137,23 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Tên gian hàng";
             // 
+            // btnGianHang
+            // 
+            this.btnGianHang.Location = new System.Drawing.Point(273, 165);
+            this.btnGianHang.Name = "btnGianHang";
+            this.btnGianHang.Size = new System.Drawing.Size(26, 23);
+            this.btnGianHang.TabIndex = 21;
+            this.btnGianHang.Text = "...";
+            this.btnGianHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGianHang.UseVisualStyleBackColor = true;
+            this.btnGianHang.Click += new System.EventHandler(this.btnGianHang_Click);
+            // 
             // FrmCreateGianHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 300);
+            this.Controls.Add(this.btnGianHang);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.txtLuu);
@@ -165,13 +178,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaGH;
-        private System.Windows.Forms.TextBox txtTenGH;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMaLoaiHang;
         private System.Windows.Forms.Button txtLuu;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.ErrorProvider errTenGH;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnGianHang;
+        public System.Windows.Forms.TextBox txtTenGH;
+        public System.Windows.Forms.TextBox txtMaLoaiHang;
     }
 }

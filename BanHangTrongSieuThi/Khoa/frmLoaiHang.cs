@@ -1,4 +1,5 @@
-﻿using BUS;
+﻿using BanHangTrongSieuThi.Linh;
+using BUS;
 using DAO;
 using System;
 using System.Collections.Generic;
@@ -10,24 +11,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BanHangTrongSieuThi.Linh
+namespace BanHangTrongSieuThi.Khoa
 {
     public partial class frmLoaiHang : Form
     {
         public List<LoaiHang> data;
         List<LoaiHang> dataFilter;
         private LoaiHang lh;
+        public FrmCreateGianHang _frmCreateGianHang;
 
         public frmLoaiHang()
         {
             InitializeComponent();
             data = LoaiHangBus.getListLoaiHang();
             dataFilter = data;
+            dgvLoaiHang.DataSource = data;
         }
+      
 
         private void frmLoaiHang_Load(object sender, EventArgs e)
         {
-            dgvLoaiHang.DataSource = data;
+           
             dgvLoaiHang.Columns[0].HeaderText = "Mã";
             dgvLoaiHang.Columns[0].Width = 50;
             dgvLoaiHang.Columns[1].HeaderText = "Tên Loại Hàng";
@@ -90,7 +94,7 @@ namespace BanHangTrongSieuThi.Linh
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(tbMaLoaiHang.Text.Length == 0)
+            if (tbMaLoaiHang.Text.Length == 0)
             {
                 erpName.SetError(tbMaLoaiHang, "Chưa chọn loại hàng để sửa");
             }
@@ -124,5 +128,14 @@ namespace BanHangTrongSieuThi.Linh
         {
             this.Close();
         }
+
+        private void btnChon_Click(object sender, EventArgs e)
+        {
+            var LoaiHangChon = dgvLoaiHang.CurrentRow.DataBoundItem as LoaiHang;
+            _frmCreateGianHang.txtMaLoaiHang.Text = LoaiHangChon.MaLoaiHang.ToString();
+            this.Close();
+        }
+
+       
     }
 }
