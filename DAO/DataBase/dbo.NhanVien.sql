@@ -49,3 +49,14 @@ end
 
 --vao bang GiangHang ,click chuot phai chon show table definition roi chen doan nay xuong duoi roi update
 Constraint [FK_GianHang_LoaiHang] Foreign key (LoaiHangMa) references LoaiHang(MaLoaiHang)
+
+
+--duc anh tao bang hang
+Create table Hang(
+	MaHang int primary key identity(1,1),
+	TenHang nvarchar(50),
+	DVT nvarchar(15),
+	SoLuong int,
+	MaLoaiHang int references LoaiHang(MaLoaiHang),
+	MaNCC int references 
+)

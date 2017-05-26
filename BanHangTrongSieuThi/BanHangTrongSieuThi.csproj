@@ -52,11 +52,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataQLSTDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Duc Anh\FrmChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\FrmChinh.Designer.cs">
+      <DependentUpon>FrmChinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Duc Anh\FrmCreateNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Duc Anh\FrmCreateNhanVien.Designer.cs">
       <DependentUpon>FrmCreateNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\FrmHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\FrmHangHoa.Designer.cs">
+      <DependentUpon>FrmHangHoa.cs</DependentUpon>
     </Compile>
     <Compile Include="Duc Anh\FrmNhanVien.cs">
       <SubType>Form</SubType>
@@ -114,6 +126,9 @@
     </Compile>
     <Compile Include="Linh\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Duc Anh\FrmChinh.resx">
+      <DependentUpon>FrmChinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmCreateNhanVien.resx">
       <DependentUpon>FrmCreateNhanVien.cs</DependentUpon>
     </EmbeddedResource>
