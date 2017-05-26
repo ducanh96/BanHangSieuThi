@@ -20,7 +20,7 @@
         <elementListCompartment Id="42767d8b-e734-4be1-a3da-ea27950dfe0d" absoluteBounds="6.14, 2.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.125 : 2.38064697265625); (5.375 : 2.38064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.125 : 2.38064697265625); (5.375 : 2.38064697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SieuThiDBDataContext/LoaiHang/LoaiHang_GianHang" />
       <nodes>
         <classShapeMoniker Id="12de90e8-1f80-4eca-aaf7-f40ee6a85fb9" />
@@ -39,14 +39,14 @@
         <elementListCompartment Id="09e53b2a-afd9-419e-9033-7e0e959ecd67" absoluteBounds="2.14, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.125 : 3.00889322916667); (2.9375 : 3.00889322916667); (2.9375 : 3.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.125 : 3.00889322916667); (2.9375 : 3.00889322916667); (2.9375 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SieuThiDBDataContext/LoaiHang/LoaiHang_Hang" />
       <nodes>
         <classShapeMoniker Id="12de90e8-1f80-4eca-aaf7-f40ee6a85fb9" />
         <classShapeMoniker Id="f1fc6082-3937-4ae8-a035-38214f8e7db3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5 : 5.04409912109375); (4.125 : 5.04409912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5 : 5.04409912109375); (4.125 : 5.04409912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SieuThiDBDataContext/NhaCungCap/NhaCungCap_Hang" />
       <nodes>
         <classShapeMoniker Id="8eefa621-e74e-420f-a352-0b82075d83a6" />

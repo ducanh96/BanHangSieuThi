@@ -15,13 +15,13 @@ namespace BanHangTrongSieuThi
 {
     public partial class FrmNhaCC : Form
     {
-        public List<nhacungcap> data;
-        List<nhacungcap> dataFilter;
+        public List<NhaCungCap> data;
+        List<NhaCungCap> dataFilter;
         public FrmNhaCC()
         {
             InitializeComponent();
             
-            data =NhanVienBus.GetListNhaCC();
+            data =NhaCungCapBus.GetListNhaCC();
             dataFilter = data;
         }
 
@@ -39,14 +39,14 @@ namespace BanHangTrongSieuThi
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var cc = dgvNhaCC.CurrentRow.DataBoundItem as nhacungcap;
+            var cc = dgvNhaCC.CurrentRow.DataBoundItem as NhaCungCap;
             DialogResult result = MessageBox.Show("Bạn có chắc chắn xóa", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
-                if (NhanVienBus.DeleteNhaCC(cc.ma))
+                if (NhaCungCapBus.DeleteNhaCC(cc.MaNCC))
                 {
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    data = NhanVienBus.GetListNhaCC();
+                    data = NhaCungCapBus.GetListNhaCC();
                     dgvNhaCC.DataSource = data;
                 }
                 else
@@ -65,14 +65,14 @@ namespace BanHangTrongSieuThi
             }
             else
             {
-                dataFilter = data.Where(x => x.tennhacungcap.Contains(txtName.Text)).ToList();
+                dataFilter = data.Where(x => x.TenNCC.ToLower().Contains(txtName.Text.ToLower())).ToList();
                 dgvNhaCC.DataSource = dataFilter;
             }
         }
 
         private void dgvNhaCC_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var _cc = dgvNhaCC.Rows[e.RowIndex].DataBoundItem as nhacungcap;
+            var _cc = dgvNhaCC.Rows[e.RowIndex].DataBoundItem as NhaCungCap;
             FrmUpNhaCC update = new FrmUpNhaCC();
             update._frmCC = this;
             update.cc= _cc;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,6 +43,8 @@
             this.txtFax = new System.Windows.Forms.TextBox();
             this.txtLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -142,7 +145,7 @@
             // 
             // txtLuu
             // 
-            this.txtLuu.Location = new System.Drawing.Point(244, 189);
+            this.txtLuu.Location = new System.Drawing.Point(170, 178);
             this.txtLuu.Name = "txtLuu";
             this.txtLuu.Size = new System.Drawing.Size(75, 23);
             this.txtLuu.TabIndex = 94;
@@ -152,18 +155,22 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(380, 189);
+            this.btnHuy.Location = new System.Drawing.Point(346, 178);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.TabIndex = 95;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FrmCreateNhaCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 261);
+            this.ClientSize = new System.Drawing.Size(582, 224);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.txtLuu);
             this.Controls.Add(this.txtFax);
@@ -181,6 +188,7 @@
             this.Name = "FrmCreateNhaCC";
             this.Text = "FrmCreateNhaCC";
             this.Load += new System.EventHandler(this.FrmCreateNhaCC_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +211,6 @@
         private System.Windows.Forms.Button txtLuu;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.ErrorProvider errten;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

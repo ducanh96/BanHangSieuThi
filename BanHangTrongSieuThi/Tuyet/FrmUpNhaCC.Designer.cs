@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,6 +44,8 @@
             this.txtLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,6 +79,7 @@
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(122, 20);
             this.txtTen.TabIndex = 86;
+            this.txtTen.TextChanged += new System.EventHandler(this.txtTen_TextChanged);
             // 
             // label3
             // 
@@ -171,6 +175,10 @@
             this.label7.TabIndex = 97;
             this.label7.Text = "Cập nhật nhà cung cấp\r\n";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FrmUpNhaCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +202,7 @@
             this.Name = "FrmUpNhaCC";
             this.Text = "FrmUpNhaCC";
             this.Load += new System.EventHandler(this.FrmUpNhaCC_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +226,6 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider errten;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SieuThiDB" Class="SieuThiDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-TIC8QEU\SQLEXPRESS;Initial Catalog=SieuThiDB;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="SieuThiConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bhst" Class="SieuThiDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-I269IGU\SQLEXPRESS;Initial Catalog=bhst;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="SieuThiConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.NhanVien" Member="NhanViens">
     <Type Name="NhanVien">
       <Column Name="MaNV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
