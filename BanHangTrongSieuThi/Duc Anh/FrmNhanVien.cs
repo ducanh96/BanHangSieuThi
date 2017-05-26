@@ -86,5 +86,24 @@ namespace BanHangTrongSieuThi
             update.nv = _nv;
             update.Show();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        public static implicit operator FrmNhanVien(FrmNhaCC v)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var _nv = dgvNhanVien.Rows[e.RowIndex].DataBoundItem as NhanVien;
+            FrmUpdateNhanVien update = new FrmUpdateNhanVien();
+            update._frmNV = this;
+            update.nv = _nv;
+            update.Show();
+        }
     }
 }
