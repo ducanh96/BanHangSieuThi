@@ -17,7 +17,8 @@ namespace BanHangTrongSieuThi.Duc_Anh
     public partial class frmLoaiHang : Form
     {
 
-
+        public int ktra = 0;
+        public FrmUpdateHH _frmUpdateHH;
         public FrmCreateHangHoa _frmCreateHH;
         public List<LoaiHang> data;
         List<LoaiHang> dataFilter;
@@ -135,9 +136,19 @@ namespace BanHangTrongSieuThi.Duc_Anh
         private void btnChon_Click(object sender, EventArgs e)
         {
             var LoaiHangChon = dgvLoaiHang.CurrentRow.DataBoundItem as LoaiHang;
-            _frmCreateHH.txtMaLH.Text = LoaiHangChon.MaLoaiHang.ToString();
-
-            this.Close();
+            if(ktra == 0)
+            {
+                _frmCreateHH.txtMaLH.Text = LoaiHangChon.MaLoaiHang.ToString();
+                _frmCreateHH.lblTenMaLH.Text = LoaiHangChon.TenLoaiHang;
+                this.Close();
+            }
+            else
+            {
+                _frmUpdateHH.txtMaLH.Text = LoaiHangChon.MaLoaiHang.ToString();
+                _frmUpdateHH.lblTenMaLH.Text = LoaiHangChon.TenLoaiHang;
+                this.Close();
+            }
+          
         }
 
        

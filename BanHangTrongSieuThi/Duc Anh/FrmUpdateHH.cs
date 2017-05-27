@@ -9,21 +9,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BanHangTrongSieuThi.Khoa;
-
 
 namespace BanHangTrongSieuThi.Duc_Anh
 {
-    public partial class FrmCreateHangHoa : Form
+    public partial class FrmUpdateHH : Form
     {
+        public Hang _hang;
         public FrmHangHoa _frmHH;
-
-        public FrmCreateHangHoa()
+        public FrmUpdateHH()
         {
             InitializeComponent();
+         
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (txtMaHang.Text.Length == 0)
             {
@@ -63,41 +62,60 @@ namespace BanHangTrongSieuThi.Duc_Anh
             {
                 errMaNCC.Clear();
             }
-          if (errMaHang.GetError(txtMaHang).Length==0 && errTenHang.GetError(txtTenHang).Length ==0 && errMaNCC.GetError(lblMaNCC).Length==0 && errMaLH.GetError(lblMaLH).Length == 0)
+
+            if (errMaHang.GetError(txtMaHang).Length == 0 && errTenHang.GetError(txtTenHang).Length == 0 && errMaNCC.GetError(lblMaNCC).Length == 0 && errMaLH.GetError(lblMaLH).Length == 0)
             {
-                var hang = new Hang();
+
+                Hang hang = new Hang();
                 hang.MaHang = txtMaHang.Text;
-                hang.TenHang = txtTenHang.Text;
+                hang.DVT = txtDVT.Text;
+                hang.GhiChu = txtGhiChu.Text;
                 hang.MaLoaiHang = int.Parse(txtMaLH.Text);
                 hang.MaNCC = int.Parse(txtMaNCC.Text);
-                hang.GhiChu = txtGhiChu.Text;
-                hang.DVT = txtDVT.Text;
-                if (HangBus.CreateHang(hang))
+                hang.TenHang = txtTenHang.Text;
+                if (HangBus.UpdateHang(hang))
                 {
-                    MessageBox.Show("Thêm mới thánh công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cập nhật thánh công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _frmHH.data = HangBus.GetListHang();
                     _frmHH.dgvHang.DataSource = _frmHH.data;
                     this.Close();
                 }
                 else
-                    MessageBox.Show("Thêm mới thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cập nhật thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
 
+        private void FrmUpdateHH_Load(object sender, EventArgs e)
+        {
+            using (var db = new SieuThiDBDataContext())
+            {
+                lblTenMaLH.Text = db.LoaiHangs.Single(x => x.MaLoaiHang == _hang.MaLoaiHang).TenLoaiHang;
+                lblTenMaNCC.Text = db.NhaCungCaps.Single(x => x.MaNCC == _hang.MaNCC).TenNCC;
+            }
+            
+            txtMaHang.Text = _hang.MaHang;
+            txtDVT.Text = _hang.DVT;
+            txtGhiChu.Text = _hang.GhiChu;
+            txtMaLH.Text = _hang.MaLoaiHang.ToString();
+            txtMaNCC.Text = _hang.MaNCC.ToString();
+            txtTenHang.Text = _hang.TenHang;
         }
 
         private void btnMaLH_Click(object sender, EventArgs e)
         {
             frmLoaiHang frmLH = new frmLoaiHang();
-            frmLH._frmCreateHH = this;
+            frmLH.ktra = 1;
+            frmLH._frmUpdateHH = this;
             frmLH.Show();
         }
 
         private void btnMaNCC_Click(object sender, EventArgs e)
         {
             FrmNhaCC frmNCC = new FrmNhaCC();
-            frmNCC._frmCreateHH = this;
+            frmNCC.ktra = 1;
+            frmNCC._frmUpdateHH = this;
             frmNCC.Show();
         }
     }
-    }
+}
 

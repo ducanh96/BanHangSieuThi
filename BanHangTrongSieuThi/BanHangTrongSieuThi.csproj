@@ -52,10 +52,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataQLSTDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Duc Anh\FrmChinh.cs">
+    <Compile Include="MenChinh\FrmChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Duc Anh\FrmChinh.Designer.cs">
+    <Compile Include="MenChinh\FrmChinh.Designer.cs">
       <DependentUpon>FrmChinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Duc Anh\FrmCreateHangHoa.cs">
@@ -63,6 +63,12 @@
     </Compile>
     <Compile Include="Duc Anh\FrmCreateHangHoa.Designer.cs">
       <DependentUpon>FrmCreateHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\FrmCreateNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\FrmCreateNhaCC.Designer.cs">
+      <DependentUpon>FrmCreateNhaCC.cs</DependentUpon>
     </Compile>
     <Compile Include="Duc Anh\FrmCreateNhanVien.cs">
       <SubType>Form</SubType>
@@ -82,6 +88,12 @@
     <Compile Include="Duc Anh\frmLoaiHang.Designer.cs">
       <DependentUpon>frmLoaiHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Duc Anh\FrmNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\FrmNhaCC.Designer.cs">
+      <DependentUpon>FrmNhaCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Duc Anh\FrmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,11 +106,23 @@
     <Compile Include="Duc Anh\frmThem.Designer.cs">
       <DependentUpon>frmThem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Duc Anh\FrmUpdateHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\FrmUpdateHH.Designer.cs">
+      <DependentUpon>FrmUpdateHH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Duc Anh\FrmUpdateNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Duc Anh\FrmUpdateNhanVien.Designer.cs">
       <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\FrmUpNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\FrmUpNhaCC.Designer.cs">
+      <DependentUpon>FrmUpNhaCC.cs</DependentUpon>
     </Compile>
     <Compile Include="Khoa\frmLoaiHang.cs">
       <SubType>Form</SubType>
@@ -162,11 +186,14 @@
     <Compile Include="Tuyet\FrmUpNhaCC.Designer.cs">
       <DependentUpon>FrmUpNhaCC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Duc Anh\FrmChinh.resx">
+    <EmbeddedResource Include="MenChinh\FrmChinh.resx">
       <DependentUpon>FrmChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmCreateHangHoa.resx">
       <DependentUpon>FrmCreateHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\FrmCreateNhaCC.resx">
+      <DependentUpon>FrmCreateNhaCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmCreateNhanVien.resx">
       <DependentUpon>FrmCreateNhanVien.cs</DependentUpon>
@@ -177,14 +204,23 @@
     <EmbeddedResource Include="Duc Anh\frmLoaiHang.resx">
       <DependentUpon>frmLoaiHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\FrmNhaCC.resx">
+      <DependentUpon>FrmNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmNhanVien.resx">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\frmThem.resx">
       <DependentUpon>frmThem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\FrmUpdateHH.resx">
+      <DependentUpon>FrmUpdateHH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmUpdateNhanVien.resx">
       <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\FrmUpNhaCC.resx">
+      <DependentUpon>FrmUpNhaCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Khoa\frmLoaiHang.resx">
       <DependentUpon>frmLoaiHang.cs</DependentUpon>

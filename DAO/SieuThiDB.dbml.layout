@@ -14,19 +14,6 @@
         <elementListCompartment Id="92fbf18c-19a7-42e9-a7e2-44e38721a198" absoluteBounds="3.3899999999999997, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="12de90e8-1f80-4eca-aaf7-f40ee6a85fb9" absoluteBounds="6.125, 2, 2, 1.1939925130208333">
-      <DataClassMoniker Name="/SieuThiDBDataContext/LoaiHang" />
-      <nestedChildShapes>
-        <elementListCompartment Id="42767d8b-e734-4be1-a3da-ea27950dfe0d" absoluteBounds="6.14, 2.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <associationConnector edgePoints="[(6.125 : 2.38064697265625); (5.375 : 2.38064697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/SieuThiDBDataContext/LoaiHang/LoaiHang_GianHang" />
-      <nodes>
-        <classShapeMoniker Id="12de90e8-1f80-4eca-aaf7-f40ee6a85fb9" />
-        <classShapeMoniker Id="a27cdc83-86f3-4193-a1e6-d06e58747f9e" />
-      </nodes>
-    </associationConnector>
     <classShape Id="8eefa621-e74e-420f-a352-0b82075d83a6" absoluteBounds="5, 4.5, 2, 1.9631982421875">
       <DataClassMoniker Name="/SieuThiDBDataContext/NhaCungCap" />
       <nestedChildShapes>
@@ -39,17 +26,30 @@
         <elementListCompartment Id="fd03fe40-5ae9-4e04-a771-ff92bfd467f8" absoluteBounds="2.515, 5.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(7.59375 : 3.19399251302083); (7.59375 : 6.6194482421875); (4.5 : 6.6194482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/SieuThiDBDataContext/LoaiHang/LoaiHang_Hang" />
-      <nodes>
-        <classShapeMoniker Id="12de90e8-1f80-4eca-aaf7-f40ee6a85fb9" />
-        <classShapeMoniker Id="cc34ed1c-870d-4461-a590-7743f32f48fd" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(5 : 5.60659912109375); (4.5 : 5.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5 : 5.60659912109375); (4.5 : 5.60659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SieuThiDBDataContext/NhaCungCap/NhaCungCap_Hang" />
       <nodes>
         <classShapeMoniker Id="8eefa621-e74e-420f-a352-0b82075d83a6" />
+        <classShapeMoniker Id="cc34ed1c-870d-4461-a590-7743f32f48fd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4e8489f7-636c-4231-bc60-bf19d44963db" absoluteBounds="6.875, 2.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SieuThiDBDataContext/LoaiHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d33ba42-4173-4ca8-9d24-17e65e97862a" absoluteBounds="6.89, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.875 : 2.44314697265625); (5.375 : 2.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SieuThiDBDataContext/LoaiHang/LoaiHang_GianHang" />
+      <nodes>
+        <classShapeMoniker Id="4e8489f7-636c-4231-bc60-bf19d44963db" />
+        <classShapeMoniker Id="a27cdc83-86f3-4193-a1e6-d06e58747f9e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.96875 : 3.31899251302083); (7.96875 : 6.6194482421875); (4.5 : 6.6194482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SieuThiDBDataContext/LoaiHang/LoaiHang_Hang" />
+      <nodes>
+        <classShapeMoniker Id="4e8489f7-636c-4231-bc60-bf19d44963db" />
         <classShapeMoniker Id="cc34ed1c-870d-4461-a590-7743f32f48fd" />
       </nodes>
     </associationConnector>

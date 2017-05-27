@@ -46,11 +46,12 @@ as
 begin
 	select @MaGianHang =  IDENT_CURRENT('GianHang')
 end
+go
 
 --vao bang GiangHang ,click chuot phai chon show table definition roi chen doan nay xuong duoi roi update
 --Constraint [FK_GianHang_LoaiHang] Foreign key (LoaiHangMa) references LoaiHang(MaLoaiHang)
 
-create proc [dbo].[MaNext](@MaNCC int output)
+create proc [dbo].[MaNhaCCNext](@MaNCC int output)
 as
 begin
 	select @MaNCC =  IDENT_CURRENT('NhaCungCap')

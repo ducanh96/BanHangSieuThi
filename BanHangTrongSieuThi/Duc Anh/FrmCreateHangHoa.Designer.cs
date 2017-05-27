@@ -43,17 +43,22 @@
             this.txtTenHang = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMaLH = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMaNCC = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblMaNCC = new System.Windows.Forms.Label();
             this.lblMaLH = new System.Windows.Forms.Label();
             this.errMaHang = new System.Windows.Forms.ErrorProvider(this.components);
             this.errTenHang = new System.Windows.Forms.ErrorProvider(this.components);
             this.errMaLH = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblMaNCC = new System.Windows.Forms.Label();
             this.errMaNCC = new System.Windows.Forms.ErrorProvider(this.components);
             this.hangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTenMaLH = new System.Windows.Forms.Label();
+            this.lblTenMaNCC = new System.Windows.Forms.Label();
             dVTLabel = new System.Windows.Forms.Label();
             ghiChuLabel = new System.Windows.Forms.Label();
             maHangLabel = new System.Windows.Forms.Label();
@@ -66,12 +71,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.errMaLH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errMaNCC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hangBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dVTLabel
             // 
             dVTLabel.AutoSize = true;
-            dVTLabel.Location = new System.Drawing.Point(293, 42);
+            dVTLabel.Location = new System.Drawing.Point(18, 236);
             dVTLabel.Name = "dVTLabel";
             dVTLabel.Size = new System.Drawing.Size(60, 13);
             dVTLabel.TabIndex = 0;
@@ -98,7 +105,7 @@
             // maLoaiHangLabel
             // 
             maLoaiHangLabel.AutoSize = true;
-            maLoaiHangLabel.Location = new System.Drawing.Point(293, 92);
+            maLoaiHangLabel.Location = new System.Drawing.Point(33, 27);
             maLoaiHangLabel.Name = "maLoaiHangLabel";
             maLoaiHangLabel.Size = new System.Drawing.Size(68, 13);
             maLoaiHangLabel.TabIndex = 6;
@@ -107,7 +114,7 @@
             // maNCCLabel
             // 
             maNCCLabel.AutoSize = true;
-            maNCCLabel.Location = new System.Drawing.Point(293, 144);
+            maNCCLabel.Location = new System.Drawing.Point(32, 32);
             maNCCLabel.Name = "maNCCLabel";
             maNCCLabel.Size = new System.Drawing.Size(91, 13);
             maNCCLabel.TabIndex = 8;
@@ -125,9 +132,9 @@
             // txtDVT
             // 
             this.txtDVT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hangBindingSource, "DVT", true));
-            this.txtDVT.Location = new System.Drawing.Point(418, 39);
+            this.txtDVT.Location = new System.Drawing.Point(101, 233);
             this.txtDVT.Name = "txtDVT";
-            this.txtDVT.Size = new System.Drawing.Size(100, 20);
+            this.txtDVT.Size = new System.Drawing.Size(140, 20);
             this.txtDVT.TabIndex = 1;
             // 
             // txtGhiChu
@@ -151,7 +158,7 @@
             // 
             this.txtMaLH.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hangBindingSource, "MaLoaiHang", true));
             this.txtMaLH.Enabled = false;
-            this.txtMaLH.Location = new System.Drawing.Point(418, 86);
+            this.txtMaLH.Location = new System.Drawing.Point(158, 21);
             this.txtMaLH.Name = "txtMaLH";
             this.txtMaLH.Size = new System.Drawing.Size(100, 20);
             this.txtMaLH.TabIndex = 7;
@@ -160,7 +167,7 @@
             // 
             this.txtMaNCC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hangBindingSource, "MaNCC", true));
             this.txtMaNCC.Enabled = false;
-            this.txtMaNCC.Location = new System.Drawing.Point(418, 141);
+            this.txtMaNCC.Location = new System.Drawing.Point(157, 29);
             this.txtMaNCC.Name = "txtMaNCC";
             this.txtMaNCC.Size = new System.Drawing.Size(100, 20);
             this.txtMaNCC.TabIndex = 9;
@@ -185,7 +192,7 @@
             // 
             // btnMaLH
             // 
-            this.btnMaLH.Location = new System.Drawing.Point(524, 84);
+            this.btnMaLH.Location = new System.Drawing.Point(264, 19);
             this.btnMaLH.Name = "btnMaLH";
             this.btnMaLH.Size = new System.Drawing.Size(29, 23);
             this.btnMaLH.TabIndex = 13;
@@ -193,18 +200,19 @@
             this.btnMaLH.UseVisualStyleBackColor = true;
             this.btnMaLH.Click += new System.EventHandler(this.btnMaLH_Click);
             // 
-            // button2
+            // btnMaNCC
             // 
-            this.button2.Location = new System.Drawing.Point(525, 139);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(29, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMaNCC.Location = new System.Drawing.Point(264, 27);
+            this.btnMaNCC.Name = "btnMaNCC";
+            this.btnMaNCC.Size = new System.Drawing.Size(29, 23);
+            this.btnMaNCC.TabIndex = 14;
+            this.btnMaNCC.Text = "...";
+            this.btnMaNCC.UseVisualStyleBackColor = true;
+            this.btnMaNCC.Click += new System.EventHandler(this.btnMaNCC_Click);
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(178, 289);
+            this.btnCreate.Location = new System.Drawing.Point(172, 348);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
             this.btnCreate.TabIndex = 15;
@@ -214,7 +222,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(328, 289);
+            this.button3.Location = new System.Drawing.Point(322, 348);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 16;
@@ -223,33 +231,36 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.lblMaNCC);
-            this.groupBox1.Controls.Add(this.lblMaLH);
             this.groupBox1.Controls.Add(this.txtTenHang);
+            this.groupBox1.Controls.Add(this.txtDVT);
+            this.groupBox1.Controls.Add(dVTLabel);
             this.groupBox1.Controls.Add(tenHangLabel);
             this.groupBox1.Controls.Add(this.txtMaHang);
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(maHangLabel);
-            this.groupBox1.Controls.Add(this.btnMaLH);
             this.groupBox1.Controls.Add(this.txtGhiChu);
             this.groupBox1.Controls.Add(ghiChuLabel);
-            this.groupBox1.Controls.Add(dVTLabel);
-            this.groupBox1.Controls.Add(this.txtDVT);
-            this.groupBox1.Controls.Add(this.txtMaNCC);
-            this.groupBox1.Controls.Add(maLoaiHangLabel);
-            this.groupBox1.Controls.Add(maNCCLabel);
-            this.groupBox1.Controls.Add(this.txtMaLH);
-            this.groupBox1.Location = new System.Drawing.Point(12, 50);
+            this.groupBox1.Location = new System.Drawing.Point(12, 52);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(593, 218);
+            this.groupBox1.Size = new System.Drawing.Size(593, 290);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hàng hóa";
             // 
+            // lblMaNCC
+            // 
+            this.lblMaNCC.AutoSize = true;
+            this.lblMaNCC.Location = new System.Drawing.Point(561, 180);
+            this.lblMaNCC.Name = "lblMaNCC";
+            this.lblMaNCC.Size = new System.Drawing.Size(0, 13);
+            this.lblMaNCC.TabIndex = 16;
+            // 
             // lblMaLH
             // 
             this.lblMaLH.AutoSize = true;
-            this.lblMaLH.Location = new System.Drawing.Point(561, 90);
+            this.lblMaLH.Location = new System.Drawing.Point(299, 24);
             this.lblMaLH.Name = "lblMaLH";
             this.lblMaLH.Size = new System.Drawing.Size(0, 13);
             this.lblMaLH.TabIndex = 15;
@@ -266,14 +277,6 @@
             // 
             this.errMaLH.ContainerControl = this;
             // 
-            // lblMaNCC
-            // 
-            this.lblMaNCC.AutoSize = true;
-            this.lblMaNCC.Location = new System.Drawing.Point(561, 148);
-            this.lblMaNCC.Name = "lblMaNCC";
-            this.lblMaNCC.Size = new System.Drawing.Size(0, 13);
-            this.lblMaNCC.TabIndex = 16;
-            // 
             // errMaNCC
             // 
             this.errMaNCC.ContainerControl = this;
@@ -282,11 +285,69 @@
             // 
             this.hangBindingSource.DataSource = typeof(DAO.Hang);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lblTenMaLH);
+            this.groupBox2.Controls.Add(this.btnMaLH);
+            this.groupBox2.Controls.Add(this.txtMaLH);
+            this.groupBox2.Controls.Add(this.lblMaLH);
+            this.groupBox2.Controls.Add(maLoaiHangLabel);
+            this.groupBox2.Location = new System.Drawing.Point(262, 38);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(331, 85);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Nhà cung cấp";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lblTenMaNCC);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.btnMaNCC);
+            this.groupBox3.Controls.Add(maNCCLabel);
+            this.groupBox3.Controls.Add(this.txtMaNCC);
+            this.groupBox3.Location = new System.Drawing.Point(262, 144);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(331, 88);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Nhà cung cấp";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(281, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 15;
+            // 
+            // lblTenMaLH
+            // 
+            this.lblTenMaLH.AutoSize = true;
+            this.lblTenMaLH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenMaLH.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblTenMaLH.Location = new System.Drawing.Point(154, 54);
+            this.lblTenMaLH.Name = "lblTenMaLH";
+            this.lblTenMaLH.Size = new System.Drawing.Size(72, 13);
+            this.lblTenMaLH.TabIndex = 16;
+            this.lblTenMaLH.Text = "Tên loại hàng";
+            // 
+            // lblTenMaNCC
+            // 
+            this.lblTenMaNCC.AutoSize = true;
+            this.lblTenMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenMaNCC.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblTenMaNCC.Location = new System.Drawing.Point(155, 61);
+            this.lblTenMaNCC.Name = "lblTenMaNCC";
+            this.lblTenMaNCC.Size = new System.Drawing.Size(95, 13);
+            this.lblTenMaNCC.TabIndex = 16;
+            this.lblTenMaNCC.Text = "Tên nhà cung cấp";
+            // 
             // FrmCreateHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 324);
+            this.ClientSize = new System.Drawing.Size(617, 383);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnCreate);
@@ -300,6 +361,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.errMaLH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errMaNCC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hangBindingSource)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,11 +376,10 @@
         private System.Windows.Forms.TextBox txtDVT;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.TextBox txtMaHang;
-        private System.Windows.Forms.TextBox txtMaNCC;
         private System.Windows.Forms.TextBox txtTenHang;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMaLH;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMaNCC;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -326,5 +390,11 @@
         private System.Windows.Forms.Label lblMaNCC;
         private System.Windows.Forms.ErrorProvider errMaNCC;
         public System.Windows.Forms.TextBox txtMaLH;
+        public System.Windows.Forms.TextBox txtMaNCC;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.Label lblTenMaNCC;
+        public System.Windows.Forms.Label lblTenMaLH;
     }
 }
