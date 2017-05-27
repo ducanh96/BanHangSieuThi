@@ -22,7 +22,7 @@ namespace DAO
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="bhst")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="SieuThiDB")]
 	public partial class SieuThiDBDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -36,15 +36,15 @@ namespace DAO
     partial void InsertGianHang(GianHang instance);
     partial void UpdateGianHang(GianHang instance);
     partial void DeleteGianHang(GianHang instance);
-    partial void InsertLoaiHang(LoaiHang instance);
-    partial void UpdateLoaiHang(LoaiHang instance);
-    partial void DeleteLoaiHang(LoaiHang instance);
     partial void InsertNhaCungCap(NhaCungCap instance);
     partial void UpdateNhaCungCap(NhaCungCap instance);
     partial void DeleteNhaCungCap(NhaCungCap instance);
     partial void InsertHang(Hang instance);
     partial void UpdateHang(Hang instance);
     partial void DeleteHang(Hang instance);
+    partial void InsertLoaiHang(LoaiHang instance);
+    partial void UpdateLoaiHang(LoaiHang instance);
+    partial void DeleteLoaiHang(LoaiHang instance);
     #endregion
 		
 		public SieuThiDBDataContext() : 
@@ -64,13 +64,8 @@ namespace DAO
 		{
 			OnCreated();
 		}
-
-        public void MaNhaCCNext(ref int? maNCC)
-        {
-            throw new NotImplementedException();
-        }
-
-        public SieuThiDBDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		
+		public SieuThiDBDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -98,14 +93,6 @@ namespace DAO
 			}
 		}
 		
-		public System.Data.Linq.Table<LoaiHang> LoaiHangs
-		{
-			get
-			{
-				return this.GetTable<LoaiHang>();
-			}
-		}
-		
 		public System.Data.Linq.Table<NhaCungCap> NhaCungCaps
 		{
 			get
@@ -119,6 +106,14 @@ namespace DAO
 			get
 			{
 				return this.GetTable<Hang>();
+			}
+		}
+		
+		public System.Data.Linq.Table<LoaiHang> LoaiHangs
+		{
+			get
+			{
+				return this.GetTable<LoaiHang>();
 			}
 		}
 		
@@ -143,6 +138,14 @@ namespace DAO
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLoaiHang);
 			maLoaiHang = ((System.Nullable<int>)(result.GetParameterValue(0)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.MaNhaCCNext")]
+		public int MaNhaCCNext([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaNCC", DbType="Int")] ref System.Nullable<int> maNCC)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maNCC);
+			maNCC = ((System.Nullable<int>)(result.GetParameterValue(0)));
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -432,148 +435,6 @@ namespace DAO
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LoaiHang")]
-	public partial class LoaiHang : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _MaLoaiHang;
-		
-		private string _TenLoaiHang;
-		
-		private EntitySet<GianHang> _GianHangs;
-		
-		private EntitySet<Hang> _Hangs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaLoaiHangChanging(int value);
-    partial void OnMaLoaiHangChanged();
-    partial void OnTenLoaiHangChanging(string value);
-    partial void OnTenLoaiHangChanged();
-    #endregion
-		
-		public LoaiHang()
-		{
-			this._GianHangs = new EntitySet<GianHang>(new Action<GianHang>(this.attach_GianHangs), new Action<GianHang>(this.detach_GianHangs));
-			this._Hangs = new EntitySet<Hang>(new Action<Hang>(this.attach_Hangs), new Action<Hang>(this.detach_Hangs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoaiHang", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int MaLoaiHang
-		{
-			get
-			{
-				return this._MaLoaiHang;
-			}
-			set
-			{
-				if ((this._MaLoaiHang != value))
-				{
-					this.OnMaLoaiHangChanging(value);
-					this.SendPropertyChanging();
-					this._MaLoaiHang = value;
-					this.SendPropertyChanged("MaLoaiHang");
-					this.OnMaLoaiHangChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenLoaiHang", DbType="NVarChar(50)")]
-		public string TenLoaiHang
-		{
-			get
-			{
-				return this._TenLoaiHang;
-			}
-			set
-			{
-				if ((this._TenLoaiHang != value))
-				{
-					this.OnTenLoaiHangChanging(value);
-					this.SendPropertyChanging();
-					this._TenLoaiHang = value;
-					this.SendPropertyChanged("TenLoaiHang");
-					this.OnTenLoaiHangChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiHang_GianHang", Storage="_GianHangs", ThisKey="MaLoaiHang", OtherKey="LoaiHangMa")]
-		public EntitySet<GianHang> GianHangs
-		{
-			get
-			{
-				return this._GianHangs;
-			}
-			set
-			{
-				this._GianHangs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiHang_Hang", Storage="_Hangs", ThisKey="MaLoaiHang", OtherKey="MaLoaiHang")]
-		public EntitySet<Hang> Hangs
-		{
-			get
-			{
-				return this._Hangs;
-			}
-			set
-			{
-				this._Hangs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_GianHangs(GianHang entity)
-		{
-			this.SendPropertyChanging();
-			entity.LoaiHang = this;
-		}
-		
-		private void detach_GianHangs(GianHang entity)
-		{
-			this.SendPropertyChanging();
-			entity.LoaiHang = null;
-		}
-		
-		private void attach_Hangs(Hang entity)
-		{
-			this.SendPropertyChanging();
-			entity.LoaiHang = this;
-		}
-		
-		private void detach_Hangs(Hang entity)
-		{
-			this.SendPropertyChanging();
-			entity.LoaiHang = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.NhaCungCap")]
 	public partial class NhaCungCap : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -802,9 +663,9 @@ namespace DAO
 		
 		private string _GhiChu;
 		
-		private EntityRef<LoaiHang> _LoaiHang;
-		
 		private EntityRef<NhaCungCap> _NhaCungCap;
+		
+		private EntityRef<LoaiHang> _LoaiHang;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -826,8 +687,8 @@ namespace DAO
 		
 		public Hang()
 		{
-			this._LoaiHang = default(EntityRef<LoaiHang>);
 			this._NhaCungCap = default(EntityRef<NhaCungCap>);
+			this._LoaiHang = default(EntityRef<LoaiHang>);
 			OnCreated();
 		}
 		
@@ -959,40 +820,6 @@ namespace DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiHang_Hang", Storage="_LoaiHang", ThisKey="MaLoaiHang", OtherKey="MaLoaiHang", IsForeignKey=true)]
-		public LoaiHang LoaiHang
-		{
-			get
-			{
-				return this._LoaiHang.Entity;
-			}
-			set
-			{
-				LoaiHang previousValue = this._LoaiHang.Entity;
-				if (((previousValue != value) 
-							|| (this._LoaiHang.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._LoaiHang.Entity = null;
-						previousValue.Hangs.Remove(this);
-					}
-					this._LoaiHang.Entity = value;
-					if ((value != null))
-					{
-						value.Hangs.Add(this);
-						this._MaLoaiHang = value.MaLoaiHang;
-					}
-					else
-					{
-						this._MaLoaiHang = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("LoaiHang");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NhaCungCap_Hang", Storage="_NhaCungCap", ThisKey="MaNCC", OtherKey="MaNCC", IsForeignKey=true)]
 		public NhaCungCap NhaCungCap
 		{
@@ -1027,6 +854,40 @@ namespace DAO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiHang_Hang", Storage="_LoaiHang", ThisKey="MaLoaiHang", OtherKey="MaLoaiHang", IsForeignKey=true)]
+		public LoaiHang LoaiHang
+		{
+			get
+			{
+				return this._LoaiHang.Entity;
+			}
+			set
+			{
+				LoaiHang previousValue = this._LoaiHang.Entity;
+				if (((previousValue != value) 
+							|| (this._LoaiHang.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._LoaiHang.Entity = null;
+						previousValue.Hangs.Remove(this);
+					}
+					this._LoaiHang.Entity = value;
+					if ((value != null))
+					{
+						value.Hangs.Add(this);
+						this._MaLoaiHang = value.MaLoaiHang;
+					}
+					else
+					{
+						this._MaLoaiHang = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("LoaiHang");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1045,6 +906,148 @@ namespace DAO
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LoaiHang")]
+	public partial class LoaiHang : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _MaLoaiHang;
+		
+		private string _TenLoaiHang;
+		
+		private EntitySet<GianHang> _GianHangs;
+		
+		private EntitySet<Hang> _Hangs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaLoaiHangChanging(int value);
+    partial void OnMaLoaiHangChanged();
+    partial void OnTenLoaiHangChanging(string value);
+    partial void OnTenLoaiHangChanged();
+    #endregion
+		
+		public LoaiHang()
+		{
+			this._GianHangs = new EntitySet<GianHang>(new Action<GianHang>(this.attach_GianHangs), new Action<GianHang>(this.detach_GianHangs));
+			this._Hangs = new EntitySet<Hang>(new Action<Hang>(this.attach_Hangs), new Action<Hang>(this.detach_Hangs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoaiHang", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int MaLoaiHang
+		{
+			get
+			{
+				return this._MaLoaiHang;
+			}
+			set
+			{
+				if ((this._MaLoaiHang != value))
+				{
+					this.OnMaLoaiHangChanging(value);
+					this.SendPropertyChanging();
+					this._MaLoaiHang = value;
+					this.SendPropertyChanged("MaLoaiHang");
+					this.OnMaLoaiHangChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenLoaiHang", DbType="NVarChar(50)")]
+		public string TenLoaiHang
+		{
+			get
+			{
+				return this._TenLoaiHang;
+			}
+			set
+			{
+				if ((this._TenLoaiHang != value))
+				{
+					this.OnTenLoaiHangChanging(value);
+					this.SendPropertyChanging();
+					this._TenLoaiHang = value;
+					this.SendPropertyChanged("TenLoaiHang");
+					this.OnTenLoaiHangChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiHang_GianHang", Storage="_GianHangs", ThisKey="MaLoaiHang", OtherKey="LoaiHangMa")]
+		public EntitySet<GianHang> GianHangs
+		{
+			get
+			{
+				return this._GianHangs;
+			}
+			set
+			{
+				this._GianHangs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiHang_Hang", Storage="_Hangs", ThisKey="MaLoaiHang", OtherKey="MaLoaiHang")]
+		public EntitySet<Hang> Hangs
+		{
+			get
+			{
+				return this._Hangs;
+			}
+			set
+			{
+				this._Hangs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_GianHangs(GianHang entity)
+		{
+			this.SendPropertyChanging();
+			entity.LoaiHang = this;
+		}
+		
+		private void detach_GianHangs(GianHang entity)
+		{
+			this.SendPropertyChanging();
+			entity.LoaiHang = null;
+		}
+		
+		private void attach_Hangs(Hang entity)
+		{
+			this.SendPropertyChanging();
+			entity.LoaiHang = this;
+		}
+		
+		private void detach_Hangs(Hang entity)
+		{
+			this.SendPropertyChanging();
+			entity.LoaiHang = null;
 		}
 	}
 }

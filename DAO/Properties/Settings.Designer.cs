@@ -26,8 +26,8 @@ namespace DAO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-I269IGU\\SQLEXPRESS;Initial Catalog=bhst;Integrated Security=T" +
-            "rue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-TIC8QEU\\SQLEXPRESS;Initial Catalog=SieuThiDB;Integrated Secur" +
+            "ity=True")]
         public string SieuThiConnectionString {
             get {
                 return ((string)(this["SieuThiConnectionString"]));
