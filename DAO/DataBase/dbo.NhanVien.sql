@@ -80,9 +80,6 @@ GO
 
 
 -- Tạo bảng DangNhap
-IF OBJECT_ID('dbo.DangNhap', 'U') IS NOT NULL
- DROP TABLE [dbo].[DangNhap]
-GO
 CREATE TABLE [dbo].[DangNhap] 
 (  
 	Username VARCHAR(50) NOT NULL PRIMARY KEY,

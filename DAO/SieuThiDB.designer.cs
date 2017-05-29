@@ -42,7 +42,7 @@ namespace DAO
     #endregion
 		
 		public SieuThiDBDataContext() : 
-				base(global::DAO.Properties.Settings.Default.SieuThiDBConnectionString, mappingSource)
+				base(global::DAO.Properties.Settings.Default.SieuThiConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
