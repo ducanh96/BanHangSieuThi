@@ -286,7 +286,6 @@
     <Compile Include="Khoa\frmLoaiHang.Designer.cs">
       <DependentUpon>frmLoaiHang.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Khoa\FrmCreateGianHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -414,6 +413,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\HoaDon\FrmCreateHoaDon.resx">
       <DependentUpon>FrmCreateHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuyDung\frmChangePass.resx">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuyDung\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenChinh\FrmChinh.resx">
       <DependentUpon>FrmChinh.cs</DependentUpon>

@@ -54,6 +54,7 @@
             // 
             // txtTenDN
             // 
+            this.txtTenDN.Enabled = false;
             this.txtTenDN.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDN.Location = new System.Drawing.Point(233, 105);
             this.txtTenDN.Margin = new System.Windows.Forms.Padding(4);
@@ -187,7 +188,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTenDN;
         private System.Windows.Forms.TextBox txtMKold;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMKnew;
@@ -197,5 +197,6 @@
         private System.Windows.Forms.Button btnDoiMK;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblThongBao;
+        public System.Windows.Forms.TextBox txtTenDN;
     }
 }

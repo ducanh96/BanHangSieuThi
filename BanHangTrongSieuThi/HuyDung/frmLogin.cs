@@ -1,4 +1,5 @@
-﻿using DAO;
+﻿using BanHangTrongSieuThi.Duc_Anh;
+using DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,9 +46,9 @@ namespace BanHangTrongSieuThi.HuyDung
             }
             else if(txtMatKhau.Text != "" && txtTenDN.Text != "")
             {
-                string MK = GetMd5(txtMatKhau.Text);
+                //string MK = GetMd5(txtMatKhau.Text);
                 var kiemTra = (from i in data.DangNhaps
-                               where i.Username == txtTenDN.Text.Trim() && i.Password == MK.Trim()
+                               where i.Username == txtTenDN.Text.Trim() && i.Password == txtMatKhau.Text.Trim()
                                select i).SingleOrDefault();
 
                 if (kiemTra == null)
@@ -58,9 +59,17 @@ namespace BanHangTrongSieuThi.HuyDung
             }
 
             this.Hide();
-            frmChangePass newForm = new frmChangePass(txtTenDN.Text);
-            newForm.ShowDialog();
-            this.Close();
+            FrmChinh frmChinh = new FrmChinh();
+            frmChinh._dn = new DangNhap
+            {
+                Username = txtTenDN.Text,
+                Password = txtMatKhau.Text
+            };
+            frmChinh._frmLG = this;
+            frmChinh.Show();
+            //frmChangePass newForm = new frmChangePass(txtTenDN.Text);
+            //newForm.ShowDialog();
+            
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {

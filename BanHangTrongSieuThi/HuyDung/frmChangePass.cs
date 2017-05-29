@@ -40,6 +40,7 @@ namespace BanHangTrongSieuThi.HuyDung
         }
         public void Validation()
         {
+
             if (txtMKold.Text == "")
             {
                 lblThongBao.Text = "Bạn phải nhập mật khẩu cũ";
@@ -60,31 +61,40 @@ namespace BanHangTrongSieuThi.HuyDung
                         where i.Username == txtTenDN.Text
                         select i
                         ).SingleOrDefault();
-            string MKold = GetMd5(txtMKold.Text);
-            string MKnew = GetMd5(txtMKnew.Text);
-            if(MKold != acc.Password)
+            //string MKold = GetMd5(txtMKold.Text);
+            //string MKnew = GetMd5(txtMKnew.Text);
+            //if(MKold != acc.Password)
+            //{
+            //    lblThongBao.Text = "Nhập mật khẩu cũ sai";
+            //    return;
+            //}
+            //if(MKnew == MKold)
+            //{
+            //    lblThongBao.Text = "Mật khẩu mới phải khác mật khẩu cũ";
+            //    return;
+            //}
+
+            if (txtMKold.Text != acc.Password)
             {
                 lblThongBao.Text = "Nhập mật khẩu cũ sai";
                 return;
             }
-            if(MKnew == MKold)
+            if (txtMKnew.Text == txtMKold.Text)
             {
                 lblThongBao.Text = "Mật khẩu mới phải khác mật khẩu cũ";
                 return;
             }
-            if(txtMKnewConfirm.Text != txtMKnew.Text)
+            if (txtMKnewConfirm.Text != txtMKnew.Text)
             {
                 lblThongBao.Text = "Xác thực mật khẩu mới không chính xác";
                 return;
             }
 
 
-            acc.Password = MKnew;
+            acc.Password = txtMKnew.Text;
             data.SubmitChanges();
             this.Hide();
-            FrmNhanVien newForm = new FrmNhanVien();
-            newForm.ShowDialog();
-            this.Close();
+    
 
         }
 
