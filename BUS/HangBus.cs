@@ -9,6 +9,18 @@ namespace BUS
 {
     public class HangBus
     {
+        #region Lấy thông tin Hàng
+        public static Hang getHang(string maHang)
+        {
+            using (SieuThiDBDataContext db = new SieuThiDBDataContext())
+            {
+                var kq = (from a in db.Hangs where a.MaHang.ToLower() == maHang.ToLower() select a).FirstOrDefault();
+                return kq;
+            }
+
+        }
+        #endregion
+
         #region Tạo mới hang hoa
         public static bool CreateHang(Hang hang)
         {

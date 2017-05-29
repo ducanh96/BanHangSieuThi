@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SieuThiDB" Class="SieuThiDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-TIC8QEU\SQLEXPRESS;Initial Catalog=SieuThiDB;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="SieuThiConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DataQLST" Class="SieuThiDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=K3MSHIRO\SQLEXPRESS;Initial Catalog=DataQLST;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="DataQLSTConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.NhanVien" Member="NhanViens">
     <Type Name="NhanVien">
       <Column Name="MaNV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -89,6 +89,28 @@
       <Association Name="NhanVien_HoaDon" Member="NhanVien" ThisKey="MaNV" OtherKey="MaNV" Type="NhanVien" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.DSHB" Member="DSHBs">
+    <Type Name="DSHB">
+      <Column Name="MaHang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoanhThu" Member="DoanhThus">
+    <Type Name="DoanhThu">
+      <Column Name="ngayThongKe" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="doanhThuHomNay" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tienLaiHomNay" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="maHangBanChay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="soLuongBanChay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HangBanTrongThang" Member="HangBanTrongThangs">
+    <Type Name="HangBanTrongThang">
+      <Column Name="MaHang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.ManvNext" Method="ManvNext">
     <Parameter Name="manv" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Return Type="System.Int32" />
@@ -104,5 +126,11 @@
   <Function Name="dbo.MaNhaCCNext" Method="MaNhaCCNext">
     <Parameter Name="MaNCC" Parameter="maNCC" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.tinhTongDoanhThuThang" Method="tinhTongDoanhThuThang">
+    <Parameter Name="NgayThang" Parameter="ngayThang" Type="System.DateTime" DbType="DateTime" Direction="InOut" />
+    <ElementType Name="tinhTongDoanhThuThangResult">
+      <Column Name="" Member="Column1" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>

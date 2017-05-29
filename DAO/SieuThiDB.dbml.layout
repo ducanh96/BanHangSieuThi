@@ -26,7 +26,7 @@
         <elementListCompartment Id="fd03fe40-5ae9-4e04-a771-ff92bfd467f8" absoluteBounds="1.8900000000000001, 5.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5 : 3.40625); (4.33333333333333 : 3.40625 : JumpStart); (4.16666666666667 : 3.40625 : JumpEnd); (3.21875 : 3.40625); (3.21875 : 5.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5 : 3.40625); (3.21875 : 3.40625); (3.21875 : 5.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SieuThiDBDataContext/NhaCungCap/NhaCungCap_Hang" />
       <nodes>
         <classShapeMoniker Id="8eefa621-e74e-420f-a352-0b82075d83a6" />
@@ -46,7 +46,7 @@
         <classShapeMoniker Id="a27cdc83-86f3-4193-a1e6-d06e58747f9e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.96875 : 3.31899251302083); (7.96875 : 6.35659912109375); (4.33333333333333 : 6.35659912109375 : JumpStart); (4.16666666666667 : 6.35659912109375 : JumpEnd); (3.875 : 6.35659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(7.96875 : 3.31899251302083); (7.96875 : 6.09557309082031); (4.33333333333333 : 6.09557309082031 : JumpStart); (4.16666666666667 : 6.09557309082031 : JumpEnd); (3.875 : 6.09557309082031)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/SieuThiDBDataContext/LoaiHang/LoaiHang_Hang" />
       <nodes>
         <classShapeMoniker Id="4e8489f7-636c-4231-bc60-bf19d44963db" />
@@ -119,5 +119,23 @@
         <classShapeMoniker Id="73fca858-0acc-40e7-9459-607d8568b62b" />
       </nodes>
     </associationConnector>
+    <classShape Id="02ede53e-17eb-4c54-9418-37c2dc43d451" absoluteBounds="3.625, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SieuThiDBDataContext/DSHB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36c8ce5b-7d7e-465a-8033-ec16e5229e20" absoluteBounds="3.64, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3518ac66-a682-4c8c-b2b1-225475677fdd" absoluteBounds="1, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SieuThiDBDataContext/DoanhThu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6925bc62-0ef0-4a62-bc04-957991d5a635" absoluteBounds="1.0150000000000001, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9426be04-b797-41b6-952b-82761d7b6cb3" absoluteBounds="6.25, 0.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SieuThiDBDataContext/HangBanTrongThang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19132d85-548c-46b7-b38b-1a3a27603b77" absoluteBounds="6.265, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
