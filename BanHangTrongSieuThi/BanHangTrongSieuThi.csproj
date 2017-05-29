@@ -124,6 +124,78 @@
     <Compile Include="Duc Anh\FrmCreateDonHang.Designer.cs">
       <DependentUpon>FrmCreateDonHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmCreateHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmCreateHangHoa.Designer.cs">
+      <DependentUpon>FrmCreateHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmCreateNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmCreateNhaCC.Designer.cs">
+      <DependentUpon>FrmCreateNhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmHangHoa.Designer.cs">
+      <DependentUpon>FrmHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\frmLoaiHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\frmLoaiHang.Designer.cs">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmNhaCC.Designer.cs">
+      <DependentUpon>FrmNhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\frmThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\frmThem.Designer.cs">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmUpdateHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmUpdateHH.Designer.cs">
+      <DependentUpon>FrmUpdateHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmUpNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonHH\FrmUpNhaCC.Designer.cs">
+      <DependentUpon>FrmUpNhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonNV\FrmCreateNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonNV\FrmCreateNhanVien.Designer.cs">
+      <DependentUpon>FrmCreateNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonNV\FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonNV\FrmNhanVien.Designer.cs">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonNV\FrmUpdateNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\ChonNV\FrmUpdateNhanVien.Designer.cs">
+      <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\FrmCreateHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\HoaDon\FrmCreateHoaDon.Designer.cs">
+      <DependentUpon>FrmCreateHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenChinh\FrmChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +365,42 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmCreateDonHang.resx">
       <DependentUpon>FrmCreateDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\ChonHH\FrmCreateHangHoa.resx">
+      <DependentUpon>FrmCreateHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\ChonHH\FrmCreateNhaCC.resx">
+      <DependentUpon>FrmCreateNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\ChonHH\FrmHangHoa.resx">
+      <DependentUpon>FrmHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\ChonHH\frmLoaiHang.resx">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\ChonHH\FrmNhaCC.resx">
+      <DependentUpon>FrmNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\ChonHH\frmThem.resx">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\ChonHH\FrmUpdateHH.resx">
+      <DependentUpon>FrmUpdateHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\ChonHH\FrmUpNhaCC.resx">
+      <DependentUpon>FrmUpNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\ChonNV\FrmCreateNhanVien.resx">
+      <DependentUpon>FrmCreateNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\ChonNV\FrmNhanVien.resx">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\ChonNV\FrmUpdateNhanVien.resx">
+      <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\HoaDon\FrmCreateHoaDon.resx">
+      <DependentUpon>FrmCreateHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenChinh\FrmChinh.resx">
       <DependentUpon>FrmChinh.cs</DependentUpon>

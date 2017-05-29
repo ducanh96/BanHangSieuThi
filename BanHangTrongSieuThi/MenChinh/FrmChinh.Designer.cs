@@ -40,7 +40,7 @@
             this.tspNCC = new System.Windows.Forms.ToolStripMenuItem();
             this.tspNV = new System.Windows.Forms.ToolStripMenuItem();
             this.tspLapDonHang = new System.Windows.Forms.ToolStripMenuItem();
-            this.lậpHóaĐơnXuấtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tspXH = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tspThoat = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +53,7 @@
             this.hệThốngToolStripMenuItem,
             this.quảnLýDanhMụcToolStripMenuItem,
             this.tspLapDonHang,
-            this.lậpHóaĐơnXuấtHàngToolStripMenuItem,
+            this.tspXH,
             this.báoCáoToolStripMenuItem,
             this.tìmKiếmToolStripMenuItem,
             this.tspThoat});
@@ -145,11 +145,12 @@
             this.tspLapDonHang.Text = "Lập đơn hàng";
             this.tspLapDonHang.Click += new System.EventHandler(this.tspLapDonHang_Click);
             // 
-            // lậpHóaĐơnXuấtHàngToolStripMenuItem
+            // tspXH
             // 
-            this.lậpHóaĐơnXuấtHàngToolStripMenuItem.Name = "lậpHóaĐơnXuấtHàngToolStripMenuItem";
-            this.lậpHóaĐơnXuấtHàngToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
-            this.lậpHóaĐơnXuấtHàngToolStripMenuItem.Text = "Lập hóa đơn xuất hàng";
+            this.tspXH.Name = "tspXH";
+            this.tspXH.Size = new System.Drawing.Size(140, 20);
+            this.tspXH.Text = "Lập hóa đơn xuất hàng";
+            this.tspXH.Click += new System.EventHandler(this.tspXH_Click);
             // 
             // báoCáoToolStripMenuItem
             // 
@@ -200,7 +201,7 @@
         private System.Windows.Forms.ToolStripMenuItem tspGH;
         private System.Windows.Forms.ToolStripMenuItem tspNCC;
         private System.Windows.Forms.ToolStripMenuItem tspLapDonHang;
-        private System.Windows.Forms.ToolStripMenuItem lậpHóaĐơnXuấtHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tspXH;
         private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tspNV;
         private System.Windows.Forms.ToolStripMenuItem tìmKiếmToolStripMenuItem;

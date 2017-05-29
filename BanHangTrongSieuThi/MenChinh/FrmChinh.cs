@@ -59,5 +59,11 @@ namespace BanHangTrongSieuThi.Duc_Anh
             FrmNhanVien nv = new FrmNhanVien();
             nv.Show();
         }
+
+        private void tspXH_Click(object sender, EventArgs e)
+        {
+            HoaDon.FrmCreateHoaDon create = new HoaDon.FrmCreateHoaDon();
+            create.Show();
+        }
     }
 }
