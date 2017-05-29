@@ -14,7 +14,7 @@ namespace BanHangTrongSieuThi.Duc_Anh
 {
     public partial class FrmCreateNhaCC : Form
     {
-        public FrmNhaCC _frmCC;
+        public  FrmNhaCC _frmCC;
       
 
         public FrmCreateNhaCC()

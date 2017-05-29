@@ -9,9 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BanHangTrongSieuThi.Tuyet;
 
-namespace BanHangTrongSieuThi
+
+namespace BanHangTrongSieuThi.Tuyet
 {
     public partial class FrmNhaCC : Form
     {

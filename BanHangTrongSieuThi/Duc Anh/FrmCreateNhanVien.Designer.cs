@@ -175,7 +175,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmCreateNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCreateNhanVien";
+            this.Text = "Tạo nhân viên";
             this.Load += new System.EventHandler(this.FrmCreateNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errTenNV)).EndInit();
             this.ResumeLayout(false);

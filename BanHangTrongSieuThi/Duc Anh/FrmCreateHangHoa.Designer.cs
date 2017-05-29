@@ -36,6 +36,7 @@
             System.Windows.Forms.Label maNCCLabel;
             System.Windows.Forms.Label tenHangLabel;
             this.txtDVT = new System.Windows.Forms.TextBox();
+            this.hangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.txtMaHang = new System.Windows.Forms.TextBox();
             this.txtMaLH = new System.Windows.Forms.TextBox();
@@ -47,32 +48,31 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblMaNCC = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblTenMaNCC = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblTenMaLH = new System.Windows.Forms.Label();
             this.lblMaLH = new System.Windows.Forms.Label();
+            this.lblMaNCC = new System.Windows.Forms.Label();
             this.errMaHang = new System.Windows.Forms.ErrorProvider(this.components);
             this.errTenHang = new System.Windows.Forms.ErrorProvider(this.components);
             this.errMaLH = new System.Windows.Forms.ErrorProvider(this.components);
             this.errMaNCC = new System.Windows.Forms.ErrorProvider(this.components);
-            this.hangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblTenMaLH = new System.Windows.Forms.Label();
-            this.lblTenMaNCC = new System.Windows.Forms.Label();
             dVTLabel = new System.Windows.Forms.Label();
             ghiChuLabel = new System.Windows.Forms.Label();
             maHangLabel = new System.Windows.Forms.Label();
             maLoaiHangLabel = new System.Windows.Forms.Label();
             maNCCLabel = new System.Windows.Forms.Label();
             tenHangLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.hangBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errMaHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errTenHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errMaLH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errMaNCC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hangBindingSource)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dVTLabel
@@ -136,6 +136,10 @@
             this.txtDVT.Name = "txtDVT";
             this.txtDVT.Size = new System.Drawing.Size(140, 20);
             this.txtDVT.TabIndex = 1;
+            // 
+            // hangBindingSource
+            // 
+            this.hangBindingSource.DataSource = typeof(DAO.Hang);
             // 
             // txtGhiChu
             // 
@@ -249,13 +253,63 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hàng hóa";
             // 
-            // lblMaNCC
+            // groupBox3
             // 
-            this.lblMaNCC.AutoSize = true;
-            this.lblMaNCC.Location = new System.Drawing.Point(561, 180);
-            this.lblMaNCC.Name = "lblMaNCC";
-            this.lblMaNCC.Size = new System.Drawing.Size(0, 13);
-            this.lblMaNCC.TabIndex = 16;
+            this.groupBox3.Controls.Add(this.lblTenMaNCC);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.btnMaNCC);
+            this.groupBox3.Controls.Add(maNCCLabel);
+            this.groupBox3.Controls.Add(this.txtMaNCC);
+            this.groupBox3.Location = new System.Drawing.Point(262, 144);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(331, 88);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Nhà cung cấp";
+            // 
+            // lblTenMaNCC
+            // 
+            this.lblTenMaNCC.AutoSize = true;
+            this.lblTenMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenMaNCC.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblTenMaNCC.Location = new System.Drawing.Point(155, 61);
+            this.lblTenMaNCC.Name = "lblTenMaNCC";
+            this.lblTenMaNCC.Size = new System.Drawing.Size(95, 13);
+            this.lblTenMaNCC.TabIndex = 16;
+            this.lblTenMaNCC.Text = "Tên nhà cung cấp";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(281, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 15;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lblTenMaLH);
+            this.groupBox2.Controls.Add(this.btnMaLH);
+            this.groupBox2.Controls.Add(this.txtMaLH);
+            this.groupBox2.Controls.Add(this.lblMaLH);
+            this.groupBox2.Controls.Add(maLoaiHangLabel);
+            this.groupBox2.Location = new System.Drawing.Point(262, 38);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(331, 85);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Nhà cung cấp";
+            // 
+            // lblTenMaLH
+            // 
+            this.lblTenMaLH.AutoSize = true;
+            this.lblTenMaLH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenMaLH.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblTenMaLH.Location = new System.Drawing.Point(154, 54);
+            this.lblTenMaLH.Name = "lblTenMaLH";
+            this.lblTenMaLH.Size = new System.Drawing.Size(72, 13);
+            this.lblTenMaLH.TabIndex = 16;
+            this.lblTenMaLH.Text = "Tên loại hàng";
             // 
             // lblMaLH
             // 
@@ -264,6 +318,14 @@
             this.lblMaLH.Name = "lblMaLH";
             this.lblMaLH.Size = new System.Drawing.Size(0, 13);
             this.lblMaLH.TabIndex = 15;
+            // 
+            // lblMaNCC
+            // 
+            this.lblMaNCC.AutoSize = true;
+            this.lblMaNCC.Location = new System.Drawing.Point(561, 180);
+            this.lblMaNCC.Name = "lblMaNCC";
+            this.lblMaNCC.Size = new System.Drawing.Size(0, 13);
+            this.lblMaNCC.TabIndex = 16;
             // 
             // errMaHang
             // 
@@ -281,68 +343,6 @@
             // 
             this.errMaNCC.ContainerControl = this;
             // 
-            // hangBindingSource
-            // 
-            this.hangBindingSource.DataSource = typeof(DAO.Hang);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.lblTenMaLH);
-            this.groupBox2.Controls.Add(this.btnMaLH);
-            this.groupBox2.Controls.Add(this.txtMaLH);
-            this.groupBox2.Controls.Add(this.lblMaLH);
-            this.groupBox2.Controls.Add(maLoaiHangLabel);
-            this.groupBox2.Location = new System.Drawing.Point(262, 38);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(331, 85);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Nhà cung cấp";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.lblTenMaNCC);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.btnMaNCC);
-            this.groupBox3.Controls.Add(maNCCLabel);
-            this.groupBox3.Controls.Add(this.txtMaNCC);
-            this.groupBox3.Location = new System.Drawing.Point(262, 144);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(331, 88);
-            this.groupBox3.TabIndex = 18;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Nhà cung cấp";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(281, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 15;
-            // 
-            // lblTenMaLH
-            // 
-            this.lblTenMaLH.AutoSize = true;
-            this.lblTenMaLH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenMaLH.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblTenMaLH.Location = new System.Drawing.Point(154, 54);
-            this.lblTenMaLH.Name = "lblTenMaLH";
-            this.lblTenMaLH.Size = new System.Drawing.Size(72, 13);
-            this.lblTenMaLH.TabIndex = 16;
-            this.lblTenMaLH.Text = "Tên loại hàng";
-            // 
-            // lblTenMaNCC
-            // 
-            this.lblTenMaNCC.AutoSize = true;
-            this.lblTenMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenMaNCC.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblTenMaNCC.Location = new System.Drawing.Point(155, 61);
-            this.lblTenMaNCC.Name = "lblTenMaNCC";
-            this.lblTenMaNCC.Size = new System.Drawing.Size(95, 13);
-            this.lblTenMaNCC.TabIndex = 16;
-            this.lblTenMaNCC.Text = "Tên nhà cung cấp";
-            // 
             // FrmCreateHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,18 +353,19 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.label1);
             this.Name = "FrmCreateHangHoa";
-            this.Text = "FrmCreateHangHoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tạo hàng hóa";
+            ((System.ComponentModel.ISupportInitialize)(this.hangBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errMaHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errTenHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errMaLH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errMaNCC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hangBindingSource)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

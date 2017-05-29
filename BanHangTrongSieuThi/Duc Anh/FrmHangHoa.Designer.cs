@@ -44,14 +44,14 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hangBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -193,10 +193,6 @@
             // 
             this.hangBindingSource.DataSource = typeof(DAO.Hang);
             // 
-            // nhanVienBindingSource
-            // 
-            this.nhanVienBindingSource.DataSource = typeof(DAO.NhanVien);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label3);
@@ -218,6 +214,10 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Click đúp danh sách hàng hóa để sửa";
             // 
+            // nhanVienBindingSource
+            // 
+            this.nhanVienBindingSource.DataSource = typeof(DAO.NhanVien);
+            // 
             // FrmHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,14 +230,15 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.label1);
             this.Name = "FrmHangHoa";
-            this.Text = ",";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Danh sách hàng hóa";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hangBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

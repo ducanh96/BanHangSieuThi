@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvGianHang = new System.Windows.Forms.DataGridView();
-            this.maGianHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenGianHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLoaiHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GianHangbindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.maGianHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenGianHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GianHangbindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGianHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GianHangbindingSource1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GianHangbindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -81,14 +81,14 @@
             this.dgvGianHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGianHang.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvGianHang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGianHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGianHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvGianHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGianHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maGianHangDataGridViewTextBoxColumn,
@@ -105,29 +105,11 @@
             this.dgvGianHang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGianHang_CellDoubleClick);
             this.dgvGianHang.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvGianHang_RowPrePaint);
             // 
-            // maGianHangDataGridViewTextBoxColumn
-            // 
-            this.maGianHangDataGridViewTextBoxColumn.DataPropertyName = "MaGianHang";
-            this.maGianHangDataGridViewTextBoxColumn.HeaderText = "MaGianHang";
-            this.maGianHangDataGridViewTextBoxColumn.Name = "maGianHangDataGridViewTextBoxColumn";
-            this.maGianHangDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tenGianHangDataGridViewTextBoxColumn
-            // 
-            this.tenGianHangDataGridViewTextBoxColumn.DataPropertyName = "TenGianHang";
-            this.tenGianHangDataGridViewTextBoxColumn.HeaderText = "TenGianHang";
-            this.tenGianHangDataGridViewTextBoxColumn.Name = "tenGianHangDataGridViewTextBoxColumn";
-            this.tenGianHangDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // colLoaiHang
             // 
             this.colLoaiHang.HeaderText = "Tên Loại Hàng";
             this.colLoaiHang.Name = "colLoaiHang";
             this.colLoaiHang.ReadOnly = true;
-            // 
-            // GianHangbindingSource1
-            // 
-            this.GianHangbindingSource1.DataSource = typeof(DAO.GianHang);
             // 
             // btnCreate
             // 
@@ -162,6 +144,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
+            // maGianHangDataGridViewTextBoxColumn
+            // 
+            this.maGianHangDataGridViewTextBoxColumn.DataPropertyName = "MaGianHang";
+            this.maGianHangDataGridViewTextBoxColumn.HeaderText = "MaGianHang";
+            this.maGianHangDataGridViewTextBoxColumn.Name = "maGianHangDataGridViewTextBoxColumn";
+            this.maGianHangDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tenGianHangDataGridViewTextBoxColumn
+            // 
+            this.tenGianHangDataGridViewTextBoxColumn.DataPropertyName = "TenGianHang";
+            this.tenGianHangDataGridViewTextBoxColumn.HeaderText = "TenGianHang";
+            this.tenGianHangDataGridViewTextBoxColumn.Name = "tenGianHangDataGridViewTextBoxColumn";
+            this.tenGianHangDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // GianHangbindingSource1
+            // 
+            this.GianHangbindingSource1.DataSource = typeof(DAO.GianHang);
+            // 
             // FrmGianHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,12 +172,13 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.dgvGianHang);
             this.Name = "FrmGianHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GianHang";
             this.Load += new System.EventHandler(this.GianHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGianHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GianHangbindingSource1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GianHangbindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

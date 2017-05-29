@@ -152,6 +152,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Name = "FrmUpdateGianHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmUpdateGianHang";
             this.Load += new System.EventHandler(this.FrmUpdateGianHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errTenGH)).EndInit();

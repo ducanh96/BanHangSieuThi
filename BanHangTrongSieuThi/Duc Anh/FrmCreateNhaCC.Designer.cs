@@ -186,7 +186,8 @@
             this.Controls.Add(this.txtMa);
             this.Controls.Add(this.label1);
             this.Name = "FrmCreateNhaCC";
-            this.Text = "FrmCreateNhaCC";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tạo nhà cung cấp";
             this.Load += new System.EventHandler(this.FrmCreateNhaCC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

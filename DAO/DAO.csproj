@@ -70,6 +70,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SieuThiDB.dbml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\HangHoaNhap.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

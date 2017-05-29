@@ -353,7 +353,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "FrmUpdateHH";
-            this.Text = "FrmUpdateHH";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cập nhật hàng hóa";
             this.Load += new System.EventHandler(this.FrmUpdateHH_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

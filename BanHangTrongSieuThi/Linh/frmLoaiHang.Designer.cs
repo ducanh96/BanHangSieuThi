@@ -224,6 +224,7 @@
             this.Controls.Add(this.dgvLoaiHang);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmLoaiHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loại Hàng";
             this.Load += new System.EventHandler(this.frmLoaiHang_Load);
             this.groupBox1.ResumeLayout(false);
