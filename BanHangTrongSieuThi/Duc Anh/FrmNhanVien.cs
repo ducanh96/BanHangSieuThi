@@ -95,11 +95,8 @@ namespace BanHangTrongSieuThi
      
         private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var _nv = dgvNhanVien.Rows[e.RowIndex].DataBoundItem as NhanVien;
-            FrmUpdateNhanVien update = new FrmUpdateNhanVien();
-            update._frmNV = this;
-            update.nv = _nv;
-            update.Show();
+           
+
         }
     }
 }

@@ -200,7 +200,8 @@
             this.Controls.Add(this.txtMa);
             this.Controls.Add(this.label1);
             this.Name = "FrmUpNhaCC";
-            this.Text = "FrmUpNhaCC";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cập nhật nhà cung cấp";
             this.Load += new System.EventHandler(this.FrmUpNhaCC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -225,7 +226,7 @@
         private System.Windows.Forms.Button txtLuu;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ErrorProvider errten;
+       // private System.Windows.Forms.ErrorProvider errten;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

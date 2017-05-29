@@ -122,7 +122,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHuy);
             this.Name = "frmThem";
-            this.Text = "frmThem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Thêm mới loại hàng";
             ((System.ComponentModel.ISupportInitialize)(this.erpName)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

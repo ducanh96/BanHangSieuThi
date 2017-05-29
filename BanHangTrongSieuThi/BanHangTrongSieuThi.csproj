@@ -52,6 +52,78 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataQLSTDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmCreateHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmCreateHangHoa.Designer.cs">
+      <DependentUpon>FrmCreateHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmCreateNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmCreateNhaCC.Designer.cs">
+      <DependentUpon>FrmCreateNhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\frmLoaiHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\frmLoaiHang.Designer.cs">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmNhaCC.Designer.cs">
+      <DependentUpon>FrmNhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\frmThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\frmThem.Designer.cs">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmUpdateHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmUpdateHH.Designer.cs">
+      <DependentUpon>FrmUpdateHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmUpNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmUpNhaCC.Designer.cs">
+      <DependentUpon>FrmUpNhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\ChonNV\FrmCreateNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\ChonNV\FrmCreateNhanVien.Designer.cs">
+      <DependentUpon>FrmCreateNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\ChonNV\FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\ChonNV\FrmNhanVien.Designer.cs">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\ChonNV\FrmUpdateNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\ChonNV\FrmUpdateNhanVien.Designer.cs">
+      <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\ChonHH\FrmHangHoa.Designer.cs">
+      <DependentUpon>FrmHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duc Anh\FrmCreateDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duc Anh\FrmCreateDonHang.Designer.cs">
+      <DependentUpon>FrmCreateDonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenChinh\FrmChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +258,42 @@
     <Compile Include="Tuyet\FrmUpNhaCC.Designer.cs">
       <DependentUpon>FrmUpNhaCC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Duc Anh\ChonHH\FrmCreateHangHoa.resx">
+      <DependentUpon>FrmCreateHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\ChonHH\FrmCreateNhaCC.resx">
+      <DependentUpon>FrmCreateNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\ChonHH\frmLoaiHang.resx">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\ChonHH\FrmNhaCC.resx">
+      <DependentUpon>FrmNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\ChonHH\frmThem.resx">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\ChonHH\FrmUpdateHH.resx">
+      <DependentUpon>FrmUpdateHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\ChonHH\FrmUpNhaCC.resx">
+      <DependentUpon>FrmUpNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\ChonNV\FrmCreateNhanVien.resx">
+      <DependentUpon>FrmCreateNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\ChonNV\FrmNhanVien.resx">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\ChonNV\FrmUpdateNhanVien.resx">
+      <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\ChonHH\FrmHangHoa.resx">
+      <DependentUpon>FrmHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duc Anh\FrmCreateDonHang.resx">
+      <DependentUpon>FrmCreateDonHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenChinh\FrmChinh.resx">
       <DependentUpon>FrmChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +385,7 @@
     <None Include="Properties\DataSources\DAO.NhanVien.datasource">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\DAO.ViewModel.HangHoaNhap.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -122,6 +122,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHuy);
             this.Name = "frmThem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThem";
             ((System.ComponentModel.ISupportInitialize)(this.erpName)).EndInit();
             this.ResumeLayout(false);

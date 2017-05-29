@@ -45,8 +45,8 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.erpName = new System.Windows.Forms.ErrorProvider(this.components);
-            this.loaiHangBidingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnChon = new System.Windows.Forms.Button();
+            this.loaiHangBidingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiHang)).BeginInit();
@@ -208,10 +208,6 @@
             // 
             this.erpName.ContainerControl = this;
             // 
-            // loaiHangBidingSource
-            // 
-            this.loaiHangBidingSource.DataSource = typeof(DAO.LoaiHang);
-            // 
             // btnChon
             // 
             this.btnChon.BackColor = System.Drawing.Color.DodgerBlue;
@@ -222,6 +218,10 @@
             this.btnChon.Text = "Chọn";
             this.btnChon.UseVisualStyleBackColor = false;
             this.btnChon.Click += new System.EventHandler(this.btnChon_Click);
+            // 
+            // loaiHangBidingSource
+            // 
+            this.loaiHangBidingSource.DataSource = typeof(DAO.LoaiHang);
             // 
             // frmLoaiHang
             // 
@@ -236,6 +236,7 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Name = "frmLoaiHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmChonLoaiHang";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
