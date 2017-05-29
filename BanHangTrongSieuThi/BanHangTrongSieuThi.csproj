@@ -262,6 +262,18 @@
     <Compile Include="Duc Anh\FrmUpdateNhanVien.Designer.cs">
       <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="HuyDung\frmChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuyDung\frmChangePass.Designer.cs">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HuyDung\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuyDung\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Duc Anh\FrmUpNhaCC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +414,12 @@
     <EmbeddedResource Include="Duc Anh\HoaDon\FrmCreateHoaDon.resx">
       <DependentUpon>FrmCreateHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HuyDung\frmChangePass.resx">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuyDung\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenChinh\FrmChinh.resx">
       <DependentUpon>FrmChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,12 +452,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Duc Anh\FrmUpdateNhanVien.resx">
       <DependentUpon>FrmUpdateNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Duc Anh\FrmUpNhaCC.resx">
-      <DependentUpon>FrmUpNhaCC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Khoa\frmLoaiHang.resx">
-      <DependentUpon>frmLoaiHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Khoa\FrmCreateGianHang.resx">
       <DependentUpon>FrmCreateGianHang.cs</DependentUpon>

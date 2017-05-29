@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BanHangTrongSieuThi.Duc_Anh.CHonHH;
 using BanHangTrongSieuThi.Tuyet;
+using DAO;
 
 namespace BanHangTrongSieuThi.Duc_Anh
 {
     public partial class FrmChinh : Form
     {
+        public HuyDung.frmLogin _frmLG;
+
+        public DangNhap _dn;
         public FrmChinh()
         {
             InitializeComponent();
@@ -64,6 +68,30 @@ namespace BanHangTrongSieuThi.Duc_Anh
         {
             HoaDon.FrmCreateHoaDon create = new HoaDon.FrmCreateHoaDon();
             create.Show();
+        }
+
+        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tspChangePass_Click(object sender, EventArgs e)
+        {
+            HuyDung.frmChangePass change = new HuyDung.frmChangePass();
+            change.txtTenDN.Text = _dn.Username;
+            change.Show();
+        }
+
+        private void FrmChinh_Load(object sender, EventArgs e)
+        {
+            this.Text = "Xin chào " + _dn.Username;
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            _frmLG.Visible = true;
+            this.Close();
+
         }
     }
 }

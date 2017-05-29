@@ -118,4 +118,11 @@ Create table DonHang(
 		DonGia decimal,
 		Primary key (SoHD,MaHang)
 	)
-	
+	--15 Tạo bảng DangNhap
+CREATE TABLE [dbo].[DangNhap] 
+(  
+	Username VARCHAR(50) NOT NULL PRIMARY KEY,
+	Password VARCHAR(50)
+)
+ON [PRIMARY]
+GO
