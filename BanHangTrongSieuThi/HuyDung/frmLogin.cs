@@ -22,7 +22,7 @@ namespace BanHangTrongSieuThi.HuyDung
         public string GetMd5(string str)
         {
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            byte[] byteHash = md5.ComputeHash(Encoding.UTF8.GetBytes(txtMatKhau.Text));
+            byte[] byteHash = md5.ComputeHash(Encoding.UTF8.GetBytes(str));
 
             StringBuilder encryptHash = new StringBuilder();
             foreach (var item in byteHash)
@@ -58,7 +58,7 @@ namespace BanHangTrongSieuThi.HuyDung
             }
 
             this.Hide();
-            FrmNhanVien newForm = new FrmNhanVien();
+            frmChangePass newForm = new frmChangePass(txtTenDN.Text);
             newForm.ShowDialog();
             this.Close();
         }
