@@ -30,7 +30,11 @@ namespace BUS
         {
             using (SieuThiDBDataContext db = new SieuThiDBDataContext())
             {
-                return db.DSHBs.Where(x => x.MaHang.ToLower() == maHang.ToLower()).ToList();
+                var kq = (from a in db.DSHBs
+                          where a.MaHang.ToString().ToLower().Contains(maHang.ToLower())
+                          select a).ToList();
+
+                return kq;
             }
         }
 
