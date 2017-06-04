@@ -1,6 +1,5 @@
 ﻿using BanHangTrongSieuThi;
 using BanHangTrongSieuThi.Duc_Anh;
-using BanHangTrongSieuThi.HuyDung;
 using BanHangTrongSieuThi.Khoa;
 using BanHangTrongSieuThi.Linh;
 using System;
@@ -21,7 +20,7 @@ namespace BanHangTrongSieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmBaoCao());
         }
     }
 }

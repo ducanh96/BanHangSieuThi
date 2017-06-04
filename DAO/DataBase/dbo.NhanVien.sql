@@ -118,6 +118,81 @@ Create table DonHang(
 		DonGia decimal,
 		Primary key (SoHD,MaHang)
 	)
+	
+	--15 them cot SoLuong trong bang hang
+	alter table Hang
+	add SoLuong int default 0
+
+
+	--17 trigger update so luong
+	CREATE TRIGGER autoIncreaseHangNumber
+	ON HangNhap
+	FOR INSERT 
+	AS
+	begin
+	UPDATE Hang
+	SET SoLuong = Hang.SoLuong + inserted.SoLuong
+	FROM Hang INNER JOIN inserted
+	ON Hang.MaHang =inserted.MaHang
+	end
+
+	CREATE TRIGGER autoDecreaseHangNumber
+	ON HangBan
+	FOR Insert 
+	AS
+	begin
+	Update Hang
+	set SoLuong = Hang.SoLuong - inserted.SoLuong
+	FROM Hang INNER JOIN inserted
+	ON Hang.MaHang =inserted.MaHang
+	end
+
+	 
+	--19 tao View DSHangBan
+	create view DSHB 
+	as
+	select  MaHang, Sum (soluong) as soLuong, DonGia from HangBan inner join HoaDon on HangBan.SoHD = HoaDon.SoHoaDon
+	where DAY(HoaDon.NgayNhap) = DAY(GETDATE()) and MONTH(HoaDon.NgayNhap) = MONTH(GETDATE())
+	and YEAR(HoaDon.NgayNhap) = YEAR(GETDATE())
+	group by MaHang, DonGia
+
+	--20 tao bang DoanhThu
+	create table DoanhThu(
+		ngayThongKe smalldatetime not null default getdate(),
+		doanhThuHomNay bigint not null default 0,
+		tienLaiHomNay bigint not null default 0,
+		maHangBanChay nvarchar(50),
+		soLuongBanChay	int default 0,
+
+		primary key(ngayThongKe)
+	)
+
+	--21 tao view HangBanTrongThang
+	create view HangBanTrongThang
+	as
+	select MaHang, Sum(soLuong) as soLuong from HangBan inner join HoaDon
+	on HangBan.SoHD = HoaDon.SoHoaDon
+	where MONTH(HoaDon.NgayNhap) = MONTH(getdate())
+	group by MaHang
+
+
+	--Đoạn lệnh viết vào để test, không cần chạy đoạn lệnh này
+	--Tính ra tổng doanh thu trong tháng
+	select Sum(doanhThuHomNay) from DoanhThu
+	where MONTH(DoanhThu.ngayThongKe) = MONTH(getdate())
+
+	--Tính ra tổng tiền lãi trong tháng
+	select Sum(tienLaiHomNay) from DoanhThu
+	where MONTH(DoanhThu.ngayThongKe) = MONTH(getdate())
+
+
+	--Tính ra số hàng bán nhiều nhất trong tháng
+	select Max (soLuong) from(select Sum(soLuong) as soLuong from HangBan inner join HoaDon
+	on HangBan.SoHD = HoaDon.SoHoaDon
+	where MONTH(HoaDon.NgayNhap) = MONTH(getdate())
+	group by MaHang) as bangSoLuong
+
+	
 	--15 Tạo bảng DangNhap
 CREATE TABLE [dbo].[DangNhap] 
 (  
