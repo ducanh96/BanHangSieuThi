@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.875" name="SieuThiDB">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.25, 11.875" name="SieuThiDB">
   <DataContextMoniker Name="/SieuThiDBDataContext" />
   <nestedChildShapes>
     <classShape Id="baa5dfb0-735f-45ec-84ad-8d0c85a12073" absoluteBounds="0.5, 1.125, 2, 1.5785953776041666">
@@ -8,10 +8,10 @@
         <elementListCompartment Id="fec815e0-3872-47ad-ac3e-588e62aeb662" absoluteBounds="0.51500000000000012, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="a27cdc83-86f3-4193-a1e6-d06e58747f9e" absoluteBounds="3.375, 1.375, 2, 1.3862939453125">
+    <classShape Id="a27cdc83-86f3-4193-a1e6-d06e58747f9e" absoluteBounds="5.125, 1, 2, 1.3862939453125">
       <DataClassMoniker Name="/SieuThiDBDataContext/GianHang" />
       <nestedChildShapes>
-        <elementListCompartment Id="92fbf18c-19a7-42e9-a7e2-44e38721a198" absoluteBounds="3.3899999999999997, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="92fbf18c-19a7-42e9-a7e2-44e38721a198" absoluteBounds="5.14, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="8eefa621-e74e-420f-a352-0b82075d83a6" absoluteBounds="4.5, 3.5, 2, 1.9631982421875">
@@ -26,27 +26,27 @@
         <elementListCompartment Id="fd03fe40-5ae9-4e04-a771-ff92bfd467f8" absoluteBounds="1.8900000000000001, 5.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(4.5 : 3.53125); (4.20833333333333 : 3.53125 : JumpStart); (4.04166666666667 : 3.53125 : JumpEnd); (3.21875 : 3.53125); (3.21875 : 5.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.5 : 3.53125); (4.20833333333333 : 3.53125 : JumpStart); (4.04166666666667 : 3.53125 : JumpEnd); (3.21875 : 3.53125); (3.21875 : 5.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SieuThiDBDataContext/NhaCungCap/NhaCungCap_Hang" />
       <nodes>
         <classShapeMoniker Id="8eefa621-e74e-420f-a352-0b82075d83a6" />
         <classShapeMoniker Id="cc34ed1c-870d-4461-a590-7743f32f48fd" />
       </nodes>
     </associationConnector>
-    <classShape Id="4e8489f7-636c-4231-bc60-bf19d44963db" absoluteBounds="6.875, 2.125, 2, 1.1939925130208333">
+    <classShape Id="4e8489f7-636c-4231-bc60-bf19d44963db" absoluteBounds="10, 3.125, 2, 1.1939925130208333">
       <DataClassMoniker Name="/SieuThiDBDataContext/LoaiHang" />
       <nestedChildShapes>
-        <elementListCompartment Id="1d33ba42-4173-4ca8-9d24-17e65e97862a" absoluteBounds="6.89, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="1d33ba42-4173-4ca8-9d24-17e65e97862a" absoluteBounds="10.015, 3.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.875 : 2.44314697265625); (5.375 : 2.44314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(10 : 3.28125); (6.84375 : 3.28125); (6.84375 : 2.3862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/SieuThiDBDataContext/LoaiHang/LoaiHang_GianHang" />
       <nodes>
         <classShapeMoniker Id="4e8489f7-636c-4231-bc60-bf19d44963db" />
         <classShapeMoniker Id="a27cdc83-86f3-4193-a1e6-d06e58747f9e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.96875 : 3.31899251302083); (7.96875 : 6.35659912109375); (4.20833333333333 : 6.35659912109375 : JumpStart); (4.04166666666667 : 6.35659912109375 : JumpEnd); (3.875 : 6.35659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(11.53125 : 4.31899251302083); (11.53125 : 6.10659912109375); (4.20833333333333 : 6.10659912109375 : JumpStart); (4.04166666666667 : 6.10659912109375 : JumpEnd); (3.875 : 6.10659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/SieuThiDBDataContext/LoaiHang/LoaiHang_Hang" />
       <nodes>
         <classShapeMoniker Id="4e8489f7-636c-4231-bc60-bf19d44963db" />
@@ -59,7 +59,7 @@
         <elementListCompartment Id="38f7697d-02e6-4a17-8a07-5989f7b50d2d" absoluteBounds="0.515, 4.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(1.5 : 2.70359537760417); (1.5 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(1.5 : 2.70359537760417); (1.5 : 3.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/SieuThiDBDataContext/NhanVien/NhanVien_DonHang" />
       <nodes>
         <classShapeMoniker Id="baa5dfb0-735f-45ec-84ad-8d0c85a12073" />
@@ -112,12 +112,36 @@
         <classShapeMoniker Id="55c9c075-55af-4dca-bbbd-01b549f87625" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.5 : 2.70359537760417); (1.5 : 3.125); (4.125 : 3.125); (4.125 : 10.9431469726562); (4.625 : 10.9431469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.031252 : 2.70359537760417); (2.031252 : 3.125); (4.125 : 3.125); (4.125 : 10.9431469726562); (4.625 : 10.9431469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/SieuThiDBDataContext/NhanVien/NhanVien_HoaDon" />
       <nodes>
         <classShapeMoniker Id="baa5dfb0-735f-45ec-84ad-8d0c85a12073" />
         <classShapeMoniker Id="73fca858-0acc-40e7-9459-607d8568b62b" />
       </nodes>
     </associationConnector>
+    <classShape Id="f27b1465-aa43-4fe8-8f82-3d57680f7b4e" absoluteBounds="9, 6.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SieuThiDBDataContext/DSHB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ef5f0c6-e195-4b3d-9ced-3ebdcdd0d07f" absoluteBounds="9.015, 7.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="73d7874d-3ed0-472c-9342-336e09a5a45f" absoluteBounds="3.125, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SieuThiDBDataContext/DoanhThu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2fa9111f-ae2e-4ef6-8b80-27811fa1ab49" absoluteBounds="3.14, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68d21fd4-9ebe-40f1-b2aa-1df3e7be1b3b" absoluteBounds="7.125, 0.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SieuThiDBDataContext/HangBanTrongThang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58094521-1c4e-429a-94da-1ed016ba609c" absoluteBounds="7.1400000000000006, 1.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d454dcf-c791-4ec3-a055-5261988d68d3" absoluteBounds="9.875, 1.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SieuThiDBDataContext/DangNhap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8bb686b8-7f7a-4b01-b115-8b9b071d69ea" absoluteBounds="9.89, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

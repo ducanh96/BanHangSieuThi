@@ -20,7 +20,7 @@ namespace BanHangTrongSieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBaoCao());
+            Application.Run(new HuyDung.frmLogin());
         }
     }
 }

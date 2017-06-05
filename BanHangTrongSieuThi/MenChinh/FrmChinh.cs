@@ -93,5 +93,11 @@ namespace BanHangTrongSieuThi.Duc_Anh
             this.Close();
 
         }
+
+        private void tspHangHoa_Click(object sender, EventArgs e)
+        {
+            Linh.frmBaoCao bc = new Linh.frmBaoCao();
+            bc.Show();
+        }
     }
 }

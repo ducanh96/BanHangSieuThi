@@ -36,10 +36,6 @@ namespace DAO
     partial void InsertGianHang(GianHang instance);
     partial void UpdateGianHang(GianHang instance);
     partial void DeleteGianHang(GianHang instance);
-
-    partial void InsertDangNhap(DangNhap instance);
-    partial void UpdateDangNhap(DangNhap instance);
-    partial void DeleteDangNhap(DangNhap instance);
     partial void InsertNhaCungCap(NhaCungCap instance);
     partial void UpdateNhaCungCap(NhaCungCap instance);
     partial void DeleteNhaCungCap(NhaCungCap instance);
@@ -64,10 +60,13 @@ namespace DAO
     partial void InsertDoanhThu(DoanhThu instance);
     partial void UpdateDoanhThu(DoanhThu instance);
     partial void DeleteDoanhThu(DoanhThu instance);
+    partial void InsertDangNhap(DangNhap instance);
+    partial void UpdateDangNhap(DangNhap instance);
+    partial void DeleteDangNhap(DangNhap instance);
     #endregion
 		
 		public SieuThiDBDataContext() : 
-				base(global::DAO.Properties.Settings.Default.DataQLSTConnectionString1, mappingSource)
+				base(global::DAO.Properties.Settings.Default.SieuThiConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -2310,32 +2309,6 @@ namespace DAO
 		}
 	}
 	
-	public partial class tinhTongDoanhThuThangResult
-	{
-		
-		private System.Nullable<long> _Column1;
-		
-		public tinhTongDoanhThuThangResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="BigInt")]
-		public System.Nullable<long> Column1
-		{
-			get
-			{
-				return this._Column1;
-			}
-			set
-			{
-				if ((this._Column1 != value))
-				{
-					this._Column1 = value;
-				}
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DangNhap")]
 	public partial class DangNhap : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2418,6 +2391,32 @@ namespace DAO
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class tinhTongDoanhThuThangResult
+	{
+		
+		private System.Nullable<long> _Column1;
+		
+		public tinhTongDoanhThuThangResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="BigInt")]
+		public System.Nullable<long> Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
+				}
 			}
 		}
 	}
