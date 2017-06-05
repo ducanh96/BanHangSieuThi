@@ -134,6 +134,7 @@ namespace BanHangTrongSieuThi.Duc_Anh.HoaDon
 
 
                 };
+               
                 listHHN.Add(hhn);
                 dgvDH.DataSource = null;
                 dgvDH.DataSource = listHHN;
@@ -198,6 +199,7 @@ namespace BanHangTrongSieuThi.Duc_Anh.HoaDon
                         {
                             ktra++;
                         }
+                     
 
                     }
                 }

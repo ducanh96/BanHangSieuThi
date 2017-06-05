@@ -98,10 +98,10 @@ namespace BanHangTrongSieuThi.Linh
 
                 //Cập nhật, tính toán thống kê theo tháng;
                 long doanhThuThang = DoanhThuBus.tinhTongDoanhThuThang();
-                float percentDoanhThu = ((float)doanhThuThang / 50000000) * 100;
+                float percentDoanhThu = ((float)doanhThuThang / 50000000000) * 100;
 
                 long laiSuatThang = DoanhThuBus.tinhTongLaiTheoThang();
-                float percentLaiSuat = ((float)laiSuatThang / 15000000) * 100;
+                float percentLaiSuat = ((float)laiSuatThang / 1500000000) * 100;
 
                 tbDoanhThuThang.Text = doanhThuThang.ToString();
                 tbLaiSuatThang.Text = laiSuatThang.ToString();

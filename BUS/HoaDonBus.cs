@@ -36,6 +36,7 @@ namespace BUS
             {
                 using (SieuThiDBDataContext db = new SieuThiDBDataContext())
                 {
+                    
                     db.HangBans.InsertOnSubmit(hb);
                     db.SubmitChanges();
                     return true;
